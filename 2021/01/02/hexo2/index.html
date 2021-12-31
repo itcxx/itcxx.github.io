@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>myInformation |  CXX</title>
+      <title>部署个人博客 |  CXX</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/xin.png" />
@@ -55,7 +55,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-myInformation"
+  id="post-hexo2"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -66,7 +66,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  myInformation
+  部署个人博客
 </h1>
  
 
@@ -74,11 +74,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/12/29/myInformation/" class="article-date">
-  <time datetime="2021-12-29T06:32:43.000Z" itemprop="datePublished">2021-12-29</time>
+      <a href="/2021/01/02/hexo2/" class="article-date">
+  <time datetime="2021-01-02T03:32:23.000Z" itemprop="datePublished">2021-01-02</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF/">个人信息</a>
+    <a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a>
   </div>
   
 <div class="word_count">
@@ -86,7 +86,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">8</span>
+            <span class="post-count">242</span>
         </span>
     </span>
 
@@ -110,7 +110,30 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="这是我的个人简介"><a href="#这是我的个人简介" class="headerlink" title="这是我的个人简介"></a>这是我的个人简介</h1> 
+  <p>##HEXO配置主题</p>
+<p>更换自己心仪的主题，让自己的网站更加美观，首先下载自己选中的主题，<a href="https://link.juejin.cn/?target=https://hexo.io/themes/">hexo主题</a></p>
+<p>###下载主题</p>
+<p>通过git工具下载hexo主题<a href="https://link.juejin.cn/?target=https://hexo.io/themes/">下载</a> 自己选中的主题</p>
+<pre><code>git clone https://github.com/xxx/xxx
+</code></pre>
+<ul>
+<li>xxx：输入自己选择的主题地址</li>
+</ul>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>主题下载之后，在自己的博客/目录下有_config.yml , 修改theme为自己下载的主题名字就行了。</p>
+<pre><code>theme:  主题名称
+</code></pre>
+<p><em><strong>注意： 此时_config.yml 的文件有两个，一个在根/目录下配置的是博客的全局，另一个在自己下载的主题文件下面，主题_config.yml 设置的是该主题的配置</strong></em></p>
+<p>###重新生成</p>
+<pre><code>hexo g
+hexo s
+</code></pre>
+<p>这时打开4000端口就可以看到自己的主题已经生效：</p>
+<img src="/public/images/newTheme.png">
+
+
+<p>###设置主题</p>
+<p>我个人目前用的是ayer主题，关于ayer主题的更多配置信息请参考ayer官网<a target="_blank" rel="noopener" href="https://shen-yu.gitee.io/2019/ayer/">链接</a>  </p>
+ 
       <!-- reward -->
       
     </div>
@@ -174,12 +197,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://itcxx.github.io/2021/12/29/myInformation/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://itcxx.github.io/2021/01/02/hexo2/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tag2/" rel="tag">Tag2</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-Theme/" rel="tag">hexo Theme</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo%E9%83%A8%E7%BD%B2/" rel="tag">hexo部署</a></li></ul>
 
     </footer>
   </div>
@@ -187,11 +210,15 @@
    
   <nav class="article-nav">
     
-    
-      <a href="/2021/12/29/hello-world/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Hello World</div>
+      <a href="/2021/01/02/one/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            部署个人博客
+          
+        </div>
       </a>
+    
     
   </nav>
 
