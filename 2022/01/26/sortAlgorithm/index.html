@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>hexo博客搭建 |  CXX</title>
+      <title>排序算法（low) |  CXX</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/xin.png" />
@@ -55,7 +55,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-one"
+  id="post-sortAlgorithm"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -66,7 +66,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  hexo博客搭建
+  排序算法（low)
 </h1>
  
 
@@ -74,11 +74,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/01/02/one/" class="article-date">
-  <time datetime="2021-01-02T03:32:23.000Z" itemprop="datePublished">2021-01-02</time>
+      <a href="/2022/01/26/sortAlgorithm/" class="article-date">
+  <time datetime="2022-01-26T14:10:29.722Z" itemprop="datePublished">2022-01-26</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%96%87%E7%AB%A0/">文章</a>
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
   </div>
   
 <div class="word_count">
@@ -86,7 +86,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.4k</span>
+            <span class="post-count">449</span>
         </span>
     </span>
 
@@ -95,7 +95,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">5 min</span>
+            <span class="post-count">1 min</span>
         </span>
     </span>
 </div>
@@ -110,159 +110,80 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="免费部署个人博客hexo到GitHub"><a href="#免费部署个人博客hexo到GitHub" class="headerlink" title="免费部署个人博客hexo到GitHub"></a>免费部署个人博客hexo到GitHub</h2><h4 id="Set-up-hexo-on-github-page"><a href="#Set-up-hexo-on-github-page" class="headerlink" title="Set up hexo on github page"></a>Set up hexo on github page</h4><hr>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><blockquote>
-<h3 id="配置环境-Configuration-Environment"><a href="#配置环境-Configuration-Environment" class="headerlink" title="配置环境 (Configuration Environment)"></a>配置环境 <em>(Configuration Environment)</em></h3></blockquote>
-<hr>
-<ol>
-<li><p>hexo的安装是基于node所以需要先安装node,下载地址: <a target="_blank" rel="noopener" href="http://nodejs.cn/download/">node</a></p>
-</li>
-<li><p>根据安装的提示安装完成按<kbd>Windows</kbd>+<kbd>R</kbd>键输入CMD打开命令行输入命令  </p>
-<p> ’node -v‘  </p>
-<p> 如果出现版本号说明安装成功  </p>
-</li>
-<li><p>安装git <a target="_blank" rel="noopener" href="https://gitforwindows.org/">下载</a></p>
-<p> 检查是否安装成功：</p>
-<p> git –version</p>
-</li>
-</ol>
-<p>通过右键打开git bash 来配置git</p>
-<pre><code>git config --global user.name &quot;填入github的用户名&quot;
-git config --global user.email &quot;githu的邮箱地址&quot;
-</code></pre>
-<p>我是通过https的方式上传和更新博客的，如果需要SSH方式上传，还需要配置SSH，可以参考<a target="_blank" rel="noopener" href="https://blog.51cto.com/u_15127503/3935693">链接</a></p>
-<ol start="4">
-<li>接下来就可以使用命令行安装hexo啦，：</li>
-</ol>
-<pre><code>npm install hexo-cli -g
-</code></pre>
-<ol start="5">
-<li>初始化自己的博客目录：</li>
-</ol>
-<pre><code>hexo init name.github.io (name写成自己想要的博客名字就可以)
-</code></pre>
-<ol start="6">
-<li>初始化之后会在本目录下生成name.github.io的文件夹，进入文件夹</li>
-</ol>
-<pre><code>cd name.github.io
-</code></pre>
-<p>博客目录的说明：<br><strong>_config.yml</strong> 网站的配置信息，可以在此配置大部分的参数。</p>
-<p><strong>package.json</strong> 应用程序的信息，新添加的插件内容也会显示在这里，可以不做修改。</p>
-<p><strong>scaffolds</strong> 模板文件夹，新建文章时，Hexo会根据scaffolds来建立文件。 Hexo的模板是指在新建的Markdown文件中默认填充的内容，我们可以在模板上添加自定义内容，比如categories，tags等。</p>
-<p><strong>source</strong> 文件夹是存放用户资源的地方，也就是我们的博客内容。初始设置两个文件夹，posts（文章）和drafts（草稿）。之后通过命令新建页面后，文件夹数量会增加。</p>
-<p><strong>themes</strong> 主题文件夹，用于存放主题文件包，Hexo会根据主题内容生成静态页面，默认主题为landscape，可根据个人喜好进行更改。</p>
-<p>以上我们所有的前期下载步骤就准备完成了，接下来就是测试hexo是否可以稳定的运行</p>
-<blockquote>
-<h3 id="设置Hexo-set-up-Hexo"><a href="#设置Hexo-set-up-Hexo" class="headerlink" title="设置Hexo (set up Hexo)"></a>设置Hexo <em>(set up Hexo)</em></h3></blockquote>
-<ol>
-<li>安装hexo</li>
-</ol>
-<pre><code>npm install
-</code></pre>
-<ol start="2">
-<li>生成静态页面</li>
-</ol>
-<pre><code>hexo clean
-hexo g
-</code></pre>
-<p>这里clean是清理之前生成的各种html文件和环境，g就是<font color=#9999>generate</font>生成   </p>
-<ol start="3">
-<li>运行网站，在本地测试看是否能跑</li>
-</ol>
-<pre><code>hexo s
-</code></pre>
-<p>s是<font color=#9999>server</font>，运行服务器<br>此时我们可以通过访问本地4000端口查看<font color=#9999>localhost:4000</font></p>
-<img src="/images/hexoStart.awebp">
-
-<blockquote>
-<h3 id="添加分类和标签-（add-tags-and-categories）"><a href="#添加分类和标签-（add-tags-and-categories）" class="headerlink" title="添加分类和标签 （add tags and categories）"></a>添加分类和标签 <em>（add tags and categories）</em></h3><p>Hexo给出了分类和标签等特性，分类页面能自动索引文章并进行分类归档</p>
+  <h1 id="排序算法（一）"><a href="#排序算法（一）" class="headerlink" title="排序算法（一）"></a>排序算法（一）</h1><blockquote>
+<p>###二分查找</p>
 </blockquote>
 <ul>
-<li>通过命令行打开分类功能：</li>
+<li><p>二分查找的前提是已经排序好的数据</p>
+</li>
+<li><p>返回数组的下表</p>
+<p>  def bin_search(data_set, value):</p>
+<pre><code>  low = 0
+  high = len(data_set) - 1
+  while low &lt;= high:
+      mid = (low + high) // 2
+      if data_set[mid] == value:
+          return mid
+      elif data_set[mid] &gt; value:
+          high = mid - 1
+      else:
+          low = mid + 1
+</code></pre>
+</li>
 </ul>
-<pre><code>hexo new page categories
-</code></pre>
-<p>以上命令会自动在source/categories 下生成<font color=#9999>index.md</font>文件<br>将文件改成：</p>
-<pre><code>---
-title: categories
-date: 2018-12-22 12:56:24
-type: categories
-layout: categories
-comments: false
----
-</code></pre>
-<p><font color=#9999>title</font>: 是生成网页后的标题<br><font color=#9999>type</font>: 这里的categories类型是定义好的，自带索引分离功能<br><font color=#9999>comments</font>: 是评论功能，flase表示关闭  </p>
-<p>如果运行 hexo s 就会在public文件下生成对应的html文件</p>
+<blockquote>
+<p>###冒泡排序（Bubble sort)</p>
+</blockquote>
 <ul>
-<li>通过命令行打开标签功能</li>
+<li>冒泡排序的时间复杂度是n2</li>
 </ul>
-<p>和打开分类功能相同</p>
-<p>首先，生成source/tags文件夹和对应的index.md文件</p>
-<pre><code>hexo new page tags
+<pre><code>def bubble_sort(data_set):
+    for i in range(len(data_set)-1):
+        for j in range(len(data_set)-i-1):
+            if data_set[j]&gt;data_set[j+1]:
+                data_set[j],data_set[j+1]=data_set[j+1],data_set[j]
+    return data_set
 </code></pre>
-<p>然后更改index.md文件</p>
-<pre><code>---
-title: tags
-date: 2018-12-22 12:56:24
-type: tags
-layout: tags
-comments: false
----
-</code></pre>
-<p><em>注意代码中的—是网页的表头，配置的时候要加上</em></p>
-<p>给文章添加分类和标签部分在下面添加文章中说明！</p>
 <blockquote>
-<h3 id="添加文章-（add-new-article"><a href="#添加文章-（add-new-article" class="headerlink" title="添加文章 （add new article)"></a>添加文章 <em>（add new article)</em></h3></blockquote>
-<p>现在就可以尝试给自己的博客添加一篇文章了<br>首先还是创建一篇文章，可以通过命令行或直接在<br><em><strong>source/_posts</strong></em>文件直接创建<br><em><strong>.md文件</strong></em>的方式：</p>
-<pre><code>hexo new article (article写成你的文章的名字）
+<p>###选择排序（select sort)</p>
+</blockquote>
+<ul>
+<li>循环选择最小的值一次放在最前边</li>
+<li>一趟排序记录最小的数， 放在第一个位置上</li>
+<li>再一趟排序记录列表无序区最小的数，放在第二个位置</li>
+<li>。。。。。</li>
+<li>算法关键点：有序区和无序区，无序区最小数的位置</li>
+</ul>
+<pre><code>def select_sort(li):
+    for i in range(len(li)-1):
+        min_loc=i
+        for j in range(i+1,len(li)):
+            if li[j]&lt;li[min_loc]:
+                min_loc=j
+        if min_loc != i:
+            li[i],li[min_loc]=li[min_loc],li[i]
 </code></pre>
-<p>在文章的头部为文章标明和备注类型等：</p>
-<pre><code>---
-title: 部署个人博客
-date: 2021-01-02 12:32:23
-tags:
-    - 标签1
-    - 标签2
-categories:
-    - 类型
----
-</code></pre>
-<p>运行以后就成功部署你的第一篇文章啦，可以通过分类或标签的方式找到你对应的文章</p>
-<p>可以为文章添加多个标签和类型，书写格式如上</p>
 <blockquote>
-<h3 id="将博客部署到你的github仓库上-（add-Blog-on-GitHub"><a href="#将博客部署到你的github仓库上-（add-Blog-on-GitHub" class="headerlink" title="将博客部署到你的github仓库上 （add Blog on GitHub)"></a>将博客部署到你的github仓库上 <em>（add Blog on GitHub)</em></h3></blockquote>
-<ol>
-<li><p>首先要在自己的github上创建相应的仓库</p>
-<p><font color=#9999>!!!注意</font>创建的仓库名称是要固定格式的</p>
-<p> 创建一个public名称为<font color=#9999>username.github.io</font>的仓库，这里usernanme必须是你本人的github名字</p>
-</li>
-<li><p>部署代码到github</p>
-<p> 打开站点的配置文件_config.yml，在文件最下方有的deplay字段，按下放修改</p>
-</li>
-</ol>
-<pre><code>deploy:
-type: git
-repo: https://github.com/username/username.github.io.git
-branch: main
-</code></pre>
-<p><strong>repo:</strong> 中username 写入自己的github用户名，如果是通过SSH方式链接的需要写成<br><a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#109;</a>:username/username.github.io.git</p>
-<p><strong>branch:</strong> 写你要上传到仓库的哪个分支，最新版本的github跟新了默认版本为main,旧版本的是master</p>
-<ol start="3">
-<li>部署deploy-git</li>
-</ol>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre>
-<p>部署deploy-git以后可以通过hexo的命令就直接自动部署博客了，不需要再手动敲git命令</p>
-<p>部署完成以后就可以上传了</p>
-<pre><code>hexo c
-hexo g
-hexo d
-</code></pre>
-<p>这里的d就是deploy部署文章，也可以写成hexo deploy , c 和 g在上文都有介绍<br>部署完成以后就可以打开网址看到了，<br>网址可以在仓库setting-Pages上看到</p>
-<img src="/images/githubPage.png">
+<p>###插入排序（insert sort)</p>
+</blockquote>
+<ul>
+<li>初始时手里（有序区）只有一张牌</li>
+<li>每次（从无序区）摸一张牌，插入到手里已有牌的正确位置</li>
+<li>左手放置有序的牌（从小到大） ， 右手为无序牌， 每次从右手的第一个位置抽取一张牌，往左手插入。</li>
+</ul>
+<pre><code>def insert_sort(data_set):
+    for i in range(1,len(data_set):
+        catch=data_set[i]  #catch 存放右手抓取的牌
+        left_index=i-1     #left_index一开始存取的是左手最后一个数下标
+        while left_index&gt;=0 and catch&lt;=data_set[left_index]:  #当左手下标大于0，并且抓取的牌小于左手对应下标的牌
+            data_set[left_index+1]=dsata_set[left_index]    #将左手下表的牌向后移动一位
+            left_index=left_index-1     #将下表向前移动一位
+        data_set[left_index+1]=catch    #循环结束将牌插入到下表后
+    return data_set
 
 
-<p>文章参考：<br>    <a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903679858851853">https://juejin.cn/post/6844903679858851853</a><br>            <a target="_blank" rel="noopener" href="https://blog.51cto.com/u_15127503/3935693">https://blog.51cto.com/u_15127503/3935693</a></p>
+        
+</code></pre>
  
       <!-- reward -->
       
@@ -327,12 +248,12 @@ hexo d
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://itcxx.github.io/2021/01/02/one/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://itcxx.github.io/2022/01/26/sortAlgorithm/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo%E9%83%A8%E7%BD%B2/" rel="tag">hexo部署</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%86%92%E6%B3%A1/" rel="tag">冒泡</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8F%92%E5%85%A5/" rel="tag">插入</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%89%E6%8B%A9/" rel="tag">选择</a></li></ul>
 
     </footer>
   </div>
@@ -340,19 +261,10 @@ hexo d
    
   <nav class="article-nav">
     
-      <a href="/2021/12/29/hello-world/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            Hello World
-          
-        </div>
-      </a>
     
-    
-      <a href="/2021/01/02/hexo2/" class="article-nav-link">
+      <a href="/2021/12/29/myInformation/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">hexo 主题设置</div>
+        <div class="article-nav-title">myInformation</div>
       </a>
     
   </nav>
