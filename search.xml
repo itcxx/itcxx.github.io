@@ -238,8 +238,7 @@ hexo s
     <title>排序算法（low)</title>
     <url>/2022/01/26/sortAlgorithm/</url>
     <content><![CDATA[<h1 id="排序算法（一）"><a href="#排序算法（一）" class="headerlink" title="排序算法（一）"></a>排序算法（一）</h1><blockquote>
-<p>###二分查找</p>
-</blockquote>
+<h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3></blockquote>
 <ul>
 <li><p>二分查找的前提是已经排序好的数据</p>
 </li>
@@ -259,8 +258,7 @@ hexo s
 </li>
 </ul>
 <blockquote>
-<p>###冒泡排序（Bubble sort)</p>
-</blockquote>
+<h3 id="冒泡排序（Bubble-sort"><a href="#冒泡排序（Bubble-sort" class="headerlink" title="冒泡排序（Bubble sort)"></a>冒泡排序（Bubble sort)</h3></blockquote>
 <ul>
 <li>冒泡排序的时间复杂度是n2</li>
 </ul>
@@ -272,8 +270,7 @@ hexo s
     return data_set
 </code></pre>
 <blockquote>
-<p>###选择排序（select sort)</p>
-</blockquote>
+<h3 id="选择排序（select-sort"><a href="#选择排序（select-sort" class="headerlink" title="选择排序（select sort)"></a>选择排序（select sort)</h3></blockquote>
 <ul>
 <li>循环选择最小的值一次放在最前边</li>
 <li>一趟排序记录最小的数， 放在第一个位置上</li>
@@ -291,8 +288,7 @@ hexo s
             li[i],li[min_loc]=li[min_loc],li[i]
 </code></pre>
 <blockquote>
-<p>###插入排序（insert sort)</p>
-</blockquote>
+<h3 id="插入排序（insert-sort"><a href="#插入排序（insert-sort" class="headerlink" title="插入排序（insert sort)"></a>插入排序（insert sort)</h3></blockquote>
 <ul>
 <li>初始时手里（有序区）只有一张牌</li>
 <li>每次（从无序区）摸一张牌，插入到手里已有牌的正确位置</li>
@@ -320,5 +316,10 @@ hexo s
         <tag>选择</tag>
         <tag>插入</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>PipeDream</title>
+    <url>/2022/04/23/PipeDream/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>

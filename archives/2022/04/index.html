@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>排序算法（low) |  CXX</title>
+      <title>Archives: 2022/4 |  CXX</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/xin.png" />
@@ -54,279 +54,68 @@
       
     <main class="content on">
       <section class="outer">
-  <article
-  id="post-sortAlgorithm"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  排序算法（low)
-</h1>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/01/26/sortAlgorithm/" class="article-date">
-  <time datetime="2022-01-26T14:10:29.722Z" itemprop="datePublished">2022-01-26</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
-  </div>
   
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">449</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
-        </span>
-    </span>
-</div>
- 
-    </div>
-      
-    <div class="tocbot"></div>
-
-
-
-
-  
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="排序算法（一）"><a href="#排序算法（一）" class="headerlink" title="排序算法（一）"></a>排序算法（一）</h1><blockquote>
-<h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3></blockquote>
-<ul>
-<li><p>二分查找的前提是已经排序好的数据</p>
-</li>
-<li><p>返回数组的下表</p>
-<p>  def bin_search(data_set, value):</p>
-<pre><code>  low = 0
-  high = len(data_set) - 1
-  while low &lt;= high:
-      mid = (low + high) // 2
-      if data_set[mid] == value:
-          return mid
-      elif data_set[mid] &gt; value:
-          high = mid - 1
-      else:
-          low = mid + 1
-</code></pre>
-</li>
-</ul>
-<blockquote>
-<h3 id="冒泡排序（Bubble-sort"><a href="#冒泡排序（Bubble-sort" class="headerlink" title="冒泡排序（Bubble sort)"></a>冒泡排序（Bubble sort)</h3></blockquote>
-<ul>
-<li>冒泡排序的时间复杂度是n2</li>
-</ul>
-<pre><code>def bubble_sort(data_set):
-    for i in range(len(data_set)-1):
-        for j in range(len(data_set)-i-1):
-            if data_set[j]&gt;data_set[j+1]:
-                data_set[j],data_set[j+1]=data_set[j+1],data_set[j]
-    return data_set
-</code></pre>
-<blockquote>
-<h3 id="选择排序（select-sort"><a href="#选择排序（select-sort" class="headerlink" title="选择排序（select sort)"></a>选择排序（select sort)</h3></blockquote>
-<ul>
-<li>循环选择最小的值一次放在最前边</li>
-<li>一趟排序记录最小的数， 放在第一个位置上</li>
-<li>再一趟排序记录列表无序区最小的数，放在第二个位置</li>
-<li>。。。。。</li>
-<li>算法关键点：有序区和无序区，无序区最小数的位置</li>
-</ul>
-<pre><code>def select_sort(li):
-    for i in range(len(li)-1):
-        min_loc=i
-        for j in range(i+1,len(li)):
-            if li[j]&lt;li[min_loc]:
-                min_loc=j
-        if min_loc != i:
-            li[i],li[min_loc]=li[min_loc],li[i]
-</code></pre>
-<blockquote>
-<h3 id="插入排序（insert-sort"><a href="#插入排序（insert-sort" class="headerlink" title="插入排序（insert sort)"></a>插入排序（insert sort)</h3></blockquote>
-<ul>
-<li>初始时手里（有序区）只有一张牌</li>
-<li>每次（从无序区）摸一张牌，插入到手里已有牌的正确位置</li>
-<li>左手放置有序的牌（从小到大） ， 右手为无序牌， 每次从右手的第一个位置抽取一张牌，往左手插入。</li>
-</ul>
-<pre><code>def insert_sort(data_set):
-    for i in range(1,len(data_set):
-        catch=data_set[i]  #catch 存放右手抓取的牌
-        left_index=i-1     #left_index一开始存取的是左手最后一个数下标
-        while left_index&gt;=0 and catch&lt;=data_set[left_index]:  #当左手下标大于0，并且抓取的牌小于左手对应下标的牌
-            data_set[left_index+1]=dsata_set[left_index]    #将左手下表的牌向后移动一位
-            left_index=left_index-1     #将下表向前移动一位
-        data_set[left_index+1]=catch    #循环结束将牌插入到下表后
-    return data_set
-
-
-        
-</code></pre>
- 
-      <!-- reward -->
-      
-    </div>
+  <ul class="ads">
     
-
-    <!-- copyright -->
-    
-    <div class="declare">
-      <ul class="post-copyright">
         <li>
-          <i class="ri-copyright-line"></i>
-          <strong>Copyright： </strong>
-          
-          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
-          
+            <a href="">
+                <img src="" width="300" alt="">
+            </a>
         </li>
-      </ul>
-    </div>
     
-    <footer class="article-footer">
+        <li>
+            <a href="">
+                <img src="" width="300" alt="">
+            </a>
+        </li>
+    
+</ul>
+  
+  
+  <article class="articles">
+    
+    
+    <h1 class="page-type-title">2022/4</h1>
+    
+    
+  
+  
+  
+  
+  
+  
+  <div class="archives-wrap">
+    <div class="archive-year-wrap">
+      <a href="/archives/2022" class="archive-year">2022</a>
+    </div>
+    <div class="archives">
+      
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2022/04/23/PipeDream/" class="archive-article-date">
+  <time datetime="2022-04-23T14:57:02.000Z" itemprop="datePublished">04/23</time>
+</a>
        
-<div class="share-btn">
-      <span class="share-sns share-outer">
-        <i class="ri-share-forward-line"></i>
-        share
-      </span>
-      <div class="share-wrap">
-        <i class="arrow"></i>
-        <div class="share-icons">
-          
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="ri-weibo-fill"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="ri-wechat-fill"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="ri-qq-fill"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="ri-douban-line"></i>
-          </a>
-          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a> -->
-          
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="ri-facebook-circle-fill"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="ri-twitter-fill"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="ri-google-fill"></i>
-          </a>
-        </div>
-      </div>
-</div>
-
-<div class="wx-share-modal">
-    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://itcxx.github.io/2022/01/26/sortAlgorithm/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%86%92%E6%B3%A1/" rel="tag">冒泡</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8F%92%E5%85%A5/" rel="tag">插入</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%89%E6%8B%A9/" rel="tag">选择</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-  <nav class="article-nav">
-    
-      <a href="/2022/04/23/PipeDream/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            PipeDream
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2021/12/29/myInformation/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">myInformation</div>
-      </a>
-    
-  </nav>
-
-   
-<!-- valine评论 -->
-<div id="vcomments-box">
-  <div id="vcomments"></div>
-</div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
-<script>
-  new Valine({
-    el: "#vcomments",
-    app_id: "",
-    app_key: "",
-    path: window.location.pathname,
-    avatar: "monsterid",
-    placeholder: "给我的文章加点评论吧~",
-    recordIP: true,
-  });
-  const infoEle = document.querySelector("#vcomments .info");
-  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
-    infoEle.childNodes.forEach(function (item) {
-      item.parentNode.removeChild(item);
-    });
-  }
-</script>
-<style>
-  #vcomments-box {
-    padding: 5px 30px;
-  }
-
-  @media screen and (max-width: 800px) {
-    #vcomments-box {
-      padding: 5px 0px;
-    }
-  }
-
-  #vcomments-box #vcomments {
-    background-color: #fff;
-  }
-
-  .v .vlist .vcard .vh {
-    padding-right: 20px;
-  }
-
-  .v .vlist .vcard {
-    padding-left: 10px;
-  }
-</style>
-
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/2022/04/23/PipeDream/"
+    >PipeDream</a> 
+</h2>
  
-   
-     
-</article>
 
+    </header>
+    
+    
+  </div>
+</article>
+      
+      
+    </div>
+  </div>
+  
+  
+
+  
 </section>
       <footer class="footer">
   <div class="outer">
@@ -463,22 +252,6 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
- 
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: ".tocbot",
-    contentSelector: ".article-entry",
-    headingSelector: "h1, h2, h3, h4, h5, h6",
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: "main",
-    positionFixedSelector: ".tocbot",
-    positionFixedClass: "is-position-fixed",
-    fixedSidebarOffset: "auto",
-  });
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link
