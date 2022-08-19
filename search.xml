@@ -251,17 +251,6 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>myInformation</title>
-    <url>/2021/12/29/myInformation/</url>
-    <content><![CDATA[<h1 id="这是我的个人简介"><a href="#这是我的个人简介" class="headerlink" title="这是我的个人简介"></a>这是我的个人简介</h1>]]></content>
-      <categories>
-        <category>个人信息</category>
-      </categories>
-      <tags>
-        <tag>Tag2</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>排序算法（low)</title>
     <url>/2022/06/17/sortAlgorithm/</url>
     <content><![CDATA[<h1 id="排序算法（一）"><a href="#排序算法（一）" class="headerlink" title="排序算法（一）"></a>排序算法（一）</h1><blockquote>
