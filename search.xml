@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/2021/12/29/hello-world/</url>
+    <url>/2022/06/17/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -25,14 +25,52 @@
       </tags>
   </entry>
   <entry>
-    <title>myInformation</title>
-    <url>/2021/12/29/myInformation/</url>
-    <content><![CDATA[<h1 id="这是我的个人简介"><a href="#这是我的个人简介" class="headerlink" title="这是我的个人简介"></a>这是我的个人简介</h1>]]></content>
+    <title>PipeDream</title>
+    <url>/2022/04/23/PipeDream/</url>
+    <content><![CDATA[<h3 id="PipeDream-Generalized-Pipeline-Parallelism-for-DNN-Training-论文阅读笔记"><a href="#PipeDream-Generalized-Pipeline-Parallelism-for-DNN-Training-论文阅读笔记" class="headerlink" title="PipeDream: Generalized Pipeline Parallelism for DNN Training 论文阅读笔记"></a>PipeDream: Generalized Pipeline Parallelism for DNN Training 论文阅读笔记</h3><p>####[D. Narayanan et al., “PipeDream: Generalized Pipeline Parallelism for DNN Training”, SOSP, 2019 ]</p>
+]]></content>
       <categories>
-        <category>个人信息</category>
+        <category>Paper</category>
+        <category>OS</category>
       </categories>
       <tags>
-        <tag>Tag2</tag>
+        <tag>PipeDream</tag>
+        <tag>os</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo 主题设置</title>
+    <url>/2021/01/02/hexo2/</url>
+    <content><![CDATA[<p>##HEXO配置主题</p>
+<p>更换自己心仪的主题，让自己的网站更加美观，首先下载自己选中的主题，<a href="https://link.juejin.cn/?target=https://hexo.io/themes/">hexo主题</a></p>
+<p>###下载主题</p>
+<p>通过git工具下载hexo主题<a href="https://link.juejin.cn/?target=https://hexo.io/themes/">下载</a> 自己选中的主题</p>
+<pre><code>git clone https://github.com/xxx/xxx
+</code></pre>
+<ul>
+<li>xxx：输入自己选择的主题地址</li>
+</ul>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>主题下载之后，在自己的博客/目录下有_config.yml , 修改theme为自己下载的主题名字就行了。</p>
+<pre><code>theme:  主题名称
+</code></pre>
+<p><em><strong>注意： 此时_config.yml 的文件有两个，一个在根/目录下配置的是博客的全局，另一个在自己下载的主题文件下面，主题_config.yml 设置的是该主题的配置</strong></em></p>
+<p>###重新生成</p>
+<pre><code>hexo g
+hexo s
+</code></pre>
+<p>这时打开4000端口就可以看到自己的主题已经生效：</p>
+<img src="/images/newTheme.png">
+
+
+<h3 id="设置主题"><a href="#设置主题" class="headerlink" title="设置主题"></a>设置主题</h3><p>我个人目前用的是ayer主题，关于ayer主题的更多配置信息请参考ayer官网<a href="https://shen-yu.gitee.io/2019/ayer/">链接</a>  </p>
+<p>文章参考：<br>    <a href="https://juejin.cn/post/6844903679858851853">https://juejin.cn/post/6844903679858851853</a><br>            <a href="https://blog.51cto.com/u_15127503/3935693">https://blog.51cto.com/u_15127503/3935693</a></p>
+]]></content>
+      <categories>
+        <category>文章</category>
+      </categories>
+      <tags>
+        <tag>hexo部署</tag>
+        <tag>hexo Theme</tag>
       </tags>
   </entry>
   <entry>
@@ -173,7 +211,7 @@ type: git
 repo: https://github.com/username/username.github.io.git
 branch: main
 </code></pre>
-<p><strong>repo:</strong> 中username 写入自己的github用户名，如果是通过SSH方式链接的需要写成<br><a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#109;</a>:username/username.github.io.git</p>
+<p><strong>repo:</strong> 中username 写入自己的github用户名，如果是通过SSH方式链接的需要写成<br><a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#104;&#x75;&#98;&#46;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#116;&#104;&#x75;&#98;&#46;&#x63;&#x6f;&#x6d;</a>:username/username.github.io.git</p>
 <p><strong>branch:</strong> 写你要上传到仓库的哪个分支，最新版本的github跟新了默认版本为main,旧版本的是master</p>
 <ol start="3">
 <li>部署deploy-git</li>
@@ -200,43 +238,32 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>hexo 主题设置</title>
-    <url>/2021/01/02/hexo2/</url>
-    <content><![CDATA[<p>##HEXO配置主题</p>
-<p>更换自己心仪的主题，让自己的网站更加美观，首先下载自己选中的主题，<a href="https://link.juejin.cn/?target=https://hexo.io/themes/">hexo主题</a></p>
-<p>###下载主题</p>
-<p>通过git工具下载hexo主题<a href="https://link.juejin.cn/?target=https://hexo.io/themes/">下载</a> 自己选中的主题</p>
-<pre><code>git clone https://github.com/xxx/xxx
-</code></pre>
-<ul>
-<li>xxx：输入自己选择的主题地址</li>
-</ul>
-<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>主题下载之后，在自己的博客/目录下有_config.yml , 修改theme为自己下载的主题名字就行了。</p>
-<pre><code>theme:  主题名称
-</code></pre>
-<p><em><strong>注意： 此时_config.yml 的文件有两个，一个在根/目录下配置的是博客的全局，另一个在自己下载的主题文件下面，主题_config.yml 设置的是该主题的配置</strong></em></p>
-<p>###重新生成</p>
-<pre><code>hexo g
-hexo s
-</code></pre>
-<p>这时打开4000端口就可以看到自己的主题已经生效：</p>
-<img src="/images/newTheme.png">
-
-
-<h3 id="设置主题"><a href="#设置主题" class="headerlink" title="设置主题"></a>设置主题</h3><p>我个人目前用的是ayer主题，关于ayer主题的更多配置信息请参考ayer官网<a href="https://shen-yu.gitee.io/2019/ayer/">链接</a>  </p>
-<p>文章参考：<br>    <a href="https://juejin.cn/post/6844903679858851853">https://juejin.cn/post/6844903679858851853</a><br>            <a href="https://blog.51cto.com/u_15127503/3935693">https://blog.51cto.com/u_15127503/3935693</a></p>
-]]></content>
+    <title>Unity中网页显示插件（UniWebView)使用方法</title>
+    <url>/2022/08/05/uniWebView/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>文章</category>
+        <category>Unity</category>
+        <category>tools</category>
       </categories>
       <tags>
-        <tag>hexo部署</tag>
-        <tag>hexo Theme</tag>
+        <tag>Unity</tag>
+        <tag>uniWebView</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>myInformation</title>
+    <url>/2021/12/29/myInformation/</url>
+    <content><![CDATA[<h1 id="这是我的个人简介"><a href="#这是我的个人简介" class="headerlink" title="这是我的个人简介"></a>这是我的个人简介</h1>]]></content>
+      <categories>
+        <category>个人信息</category>
+      </categories>
+      <tags>
+        <tag>Tag2</tag>
       </tags>
   </entry>
   <entry>
     <title>排序算法（low)</title>
-    <url>/2022/01/26/sortAlgorithm/</url>
+    <url>/2022/06/17/sortAlgorithm/</url>
     <content><![CDATA[<h1 id="排序算法（一）"><a href="#排序算法（一）" class="headerlink" title="排序算法（一）"></a>排序算法（一）</h1><blockquote>
 <h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3></blockquote>
 <ul>
@@ -316,10 +343,5 @@ hexo s
         <tag>选择</tag>
         <tag>插入</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>PipeDream</title>
-    <url>/2022/04/23/PipeDream/</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>

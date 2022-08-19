@@ -6,7 +6,7 @@
   <link href="https://itcxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://itcxx.github.io/"/>
-  <updated>2022-04-23T14:57:02.415Z</updated>
+  <updated>2022-08-05T06:23:47.215Z</updated>
   <id>https://itcxx.github.io/</id>
   
   <author>
@@ -17,23 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>PipeDream</title>
-    <link href="https://itcxx.github.io/2022/04/23/PipeDream/"/>
-    <id>https://itcxx.github.io/2022/04/23/PipeDream/</id>
-    <published>2022-04-23T14:57:02.000Z</published>
-    <updated>2022-04-23T14:57:02.415Z</updated>
+    <title>Unity中网页显示插件（UniWebView)使用方法</title>
+    <link href="https://itcxx.github.io/2022/08/05/uniWebView/"/>
+    <id>https://itcxx.github.io/2022/08/05/uniWebView/</id>
+    <published>2022-08-05T06:19:34.917Z</published>
+    <updated>2022-08-05T06:23:47.215Z</updated>
     
     
     
     
+    <category term="Unity" scheme="https://itcxx.github.io/categories/Unity/"/>
+    
+    <category term="tools" scheme="https://itcxx.github.io/categories/Unity/tools/"/>
+    
+    
+    <category term="Unity" scheme="https://itcxx.github.io/tags/Unity/"/>
+    
+    <category term="uniWebView" scheme="https://itcxx.github.io/tags/uniWebView/"/>
     
   </entry>
   
   <entry>
     <title>排序算法（low)</title>
-    <link href="https://itcxx.github.io/2022/01/26/sortAlgorithm/"/>
-    <id>https://itcxx.github.io/2022/01/26/sortAlgorithm/</id>
-    <published>2022-01-26T14:10:29.722Z</published>
+    <link href="https://itcxx.github.io/2022/06/17/sortAlgorithm/"/>
+    <id>https://itcxx.github.io/2022/06/17/sortAlgorithm/</id>
+    <published>2022-06-17T07:49:08.164Z</published>
     <updated>2022-01-26T14:16:07.273Z</updated>
     
     
@@ -56,6 +64,60 @@
     <category term="选择" scheme="https://itcxx.github.io/tags/%E9%80%89%E6%8B%A9/"/>
     
     <category term="插入" scheme="https://itcxx.github.io/tags/%E6%8F%92%E5%85%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://itcxx.github.io/2022/06/17/hello-world/"/>
+    <id>https://itcxx.github.io/2022/06/17/hello-world/</id>
+    <published>2022-06-17T07:49:08.160Z</published>
+    <updated>2021-12-29T07:06:26.719Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="欢迎界面" scheme="https://itcxx.github.io/categories/%E6%AC%A2%E8%BF%8E%E7%95%8C%E9%9D%A2/"/>
+    
+    
+    <category term="Tag1" scheme="https://itcxx.github.io/tags/Tag1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PipeDream</title>
+    <link href="https://itcxx.github.io/2022/04/23/PipeDream/"/>
+    <id>https://itcxx.github.io/2022/04/23/PipeDream/</id>
+    <published>2022-04-23T14:57:02.000Z</published>
+    <updated>2022-06-29T15:27:17.388Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;PipeDream-Generalized-Pipeline-Parallelism-for-DNN-Training-论文阅读笔记&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Paper" scheme="https://itcxx.github.io/categories/Paper/"/>
+    
+    <category term="OS" scheme="https://itcxx.github.io/categories/Paper/OS/"/>
+    
+    
+    <category term="PipeDream" scheme="https://itcxx.github.io/tags/PipeDream/"/>
+    
+    <category term="os" scheme="https://itcxx.github.io/tags/os/"/>
     
   </entry>
   
@@ -85,27 +147,30 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://itcxx.github.io/2021/12/29/hello-world/"/>
-    <id>https://itcxx.github.io/2021/12/29/hello-world/</id>
-    <published>2021-12-29T04:25:25.389Z</published>
-    <updated>2021-12-29T07:06:26.719Z</updated>
+    <title>hexo 主题设置</title>
+    <link href="https://itcxx.github.io/2021/01/02/hexo2/"/>
+    <id>https://itcxx.github.io/2021/01/02/hexo2/</id>
+    <published>2021-01-02T03:32:23.000Z</published>
+    <updated>2021-12-31T16:19:26.951Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;p&gt;##HEXO配置主题&lt;/p&gt;
+&lt;p&gt;更换自己心仪的主题，让自己的网站更加美观，首先下载自己选中的主题，&lt;a</summary>
         
       
     
     
     
-    <category term="欢迎界面" scheme="https://itcxx.github.io/categories/%E6%AC%A2%E8%BF%8E%E7%95%8C%E9%9D%A2/"/>
+    <category term="文章" scheme="https://itcxx.github.io/categories/%E6%96%87%E7%AB%A0/"/>
     
     
-    <category term="Tag1" scheme="https://itcxx.github.io/tags/Tag1/"/>
+    <category term="hexo部署" scheme="https://itcxx.github.io/tags/hexo%E9%83%A8%E7%BD%B2/"/>
+    
+    <category term="hexo Theme" scheme="https://itcxx.github.io/tags/hexo-Theme/"/>
     
   </entry>
   
@@ -131,34 +196,6 @@
     
     
     <category term="hexo部署" scheme="https://itcxx.github.io/tags/hexo%E9%83%A8%E7%BD%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo 主题设置</title>
-    <link href="https://itcxx.github.io/2021/01/02/hexo2/"/>
-    <id>https://itcxx.github.io/2021/01/02/hexo2/</id>
-    <published>2021-01-02T03:32:23.000Z</published>
-    <updated>2021-12-31T16:19:26.951Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;##HEXO配置主题&lt;/p&gt;
-&lt;p&gt;更换自己心仪的主题，让自己的网站更加美观，首先下载自己选中的主题，&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="文章" scheme="https://itcxx.github.io/categories/%E6%96%87%E7%AB%A0/"/>
-    
-    
-    <category term="hexo部署" scheme="https://itcxx.github.io/tags/hexo%E9%83%A8%E7%BD%B2/"/>
-    
-    <category term="hexo Theme" scheme="https://itcxx.github.io/tags/hexo-Theme/"/>
     
   </entry>
   
