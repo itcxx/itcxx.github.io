@@ -6,7 +6,7 @@
   <link href="https://itcxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://itcxx.github.io/"/>
-  <updated>2022-08-19T05:36:15.139Z</updated>
+  <updated>2022-08-19T05:54:07.467Z</updated>
   <id>https://itcxx.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Maven用法总结</title>
+    <link href="https://itcxx.github.io/2022/08/19/Maven/"/>
+    <id>https://itcxx.github.io/2022/08/19/Maven/</id>
+    <published>2022-08-19T05:43:16.334Z</published>
+    <updated>2022-08-19T05:54:07.467Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、Maven简介&quot;&gt;&lt;a href=&quot;#一、Maven简介&quot; class=&quot;headerlink&quot; title=&quot;一、Maven简介&quot;&gt;&lt;/a&gt;一、Maven简介&lt;/h2&gt;&lt;h4 id=&quot;1-1-在项目中如何导入jar包？&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://itcxx.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://itcxx.github.io/tags/Java/"/>
+    
+    <category term="Maven" scheme="https://itcxx.github.io/tags/Maven/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring用法总结</title>
