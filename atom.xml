@@ -6,7 +6,7 @@
   <link href="https://itcxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://itcxx.github.io/"/>
-  <updated>2022-08-19T05:54:07.467Z</updated>
+  <updated>2022-08-29T08:54:43.375Z</updated>
   <id>https://itcxx.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringMVC用法总结</title>
+    <link href="https://itcxx.github.io/2022/08/29/SpringMVC/"/>
+    <id>https://itcxx.github.io/2022/08/29/SpringMVC/</id>
+    <published>2022-08-29T08:41:40.482Z</published>
+    <updated>2022-08-29T08:54:43.375Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、SpringMVC概述&quot;&gt;&lt;a href=&quot;#一、SpringMVC概述&quot; class=&quot;headerlink&quot; title=&quot;一、SpringMVC概述&quot;&gt;&lt;/a&gt;一、SpringMVC概述&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Spring MVC</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://itcxx.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://itcxx.github.io/tags/Java/"/>
+    
+    <category term="SpringMVC" scheme="https://itcxx.github.io/tags/SpringMVC/"/>
+    
+  </entry>
   
   <entry>
     <title>Maven用法总结</title>
