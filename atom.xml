@@ -6,7 +6,7 @@
   <link href="https://itcxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://itcxx.github.io/"/>
-  <updated>2022-08-29T08:54:43.375Z</updated>
+  <updated>2022-09-10T05:51:55.591Z</updated>
   <id>https://itcxx.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Excel 常见命令</title>
+    <link href="https://itcxx.github.io/2022/09/05/excelUse/"/>
+    <id>https://itcxx.github.io/2022/09/05/excelUse/</id>
+    <published>2022-09-05T05:33:04.486Z</published>
+    <updated>2022-09-10T05:51:55.591Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;h3 id=&quot;excel常见的几个命令记录&quot;&gt;&lt;a href=&quot;#excel常见的几个命令记录&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="文章" scheme="https://itcxx.github.io/categories/%E6%96%87%E7%AB%A0/"/>
+    
+    
+    <category term="文章" scheme="https://itcxx.github.io/tags/%E6%96%87%E7%AB%A0/"/>
+    
+    <category term="excel" scheme="https://itcxx.github.io/tags/excel/"/>
+    
+  </entry>
   
   <entry>
     <title>SpringMVC用法总结</title>
@@ -49,7 +77,7 @@
     <link href="https://itcxx.github.io/2022/08/19/Maven/"/>
     <id>https://itcxx.github.io/2022/08/19/Maven/</id>
     <published>2022-08-19T05:43:16.334Z</published>
-    <updated>2022-08-19T05:54:07.467Z</updated>
+    <updated>2022-09-07T01:52:25.822Z</updated>
     
     
       
@@ -76,7 +104,7 @@
     <link href="https://itcxx.github.io/2022/08/19/Spring/"/>
     <id>https://itcxx.github.io/2022/08/19/Spring/</id>
     <published>2022-08-19T05:01:59.241Z</published>
-    <updated>2022-08-19T05:36:15.139Z</updated>
+    <updated>2022-09-07T01:52:25.819Z</updated>
     
     
       

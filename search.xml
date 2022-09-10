@@ -453,12 +453,14 @@ hexo d
 </blockquote>
 <h6 id="2-2-1-创建一个实体类"><a href="#2-2-1-创建一个实体类" class="headerlink" title="2.2.1 创建一个实体类"></a>2.2.1 创建一个实体类</h6><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String stuNum;</span><br><span class="line">    <span class="keyword">private</span> String stuName;</span><br><span class="line">    <span class="keyword">private</span> String stuGender;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> stuAge;</span><br><span class="line">    <span class="keyword">private</span> Date enterenceTime; <span class="comment">//入学日期</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
 <h6 id="2-2-2-在Spring配置文件中配置实体类"><a href="#2-2-2-在Spring配置文件中配置实体类" class="headerlink" title="2.2.2 在Spring配置文件中配置实体类"></a>2.2.2 在Spring配置文件中配置实体类</h6><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans</span></span></span><br><span class="line"><span class="string"><span class="tag">       http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!--通过bean将实体类配置给Spring进行管理,id表示实体类的唯一表示--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;stu&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.qfedu.ioc.bean.Student&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;stuNum&quot;</span> <span class="attr">value</span>=<span class="string">&quot;10002&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;stuName&quot;</span> <span class="attr">value</span>=<span class="string">&quot;李斯&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;stuGender&quot;</span> <span class="attr">value</span>=<span class="string">&quot;女&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;stuAge&quot;</span> <span class="attr">value</span>=<span class="string">&quot;20&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h6 id="2-2-3-初始化Spring对象工厂，获取对象"><a href="#2-2-3-初始化Spring对象工厂，获取对象" class="headerlink" title="2.2.3 初始化Spring对象工厂，获取对象"></a>2.2.3 初始化Spring对象工厂，获取对象</h6><ul>
 <li>ClassPathXMLApplicationContext</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1.初始化Spring容器,加载Spring配置文件</span></span><br><span class="line">ClassPathXmlApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">&quot;applicationContext.xml&quot;</span>);</span><br><span class="line"><span class="comment">//2.通过Spring容器获取Student对象</span></span><br><span class="line">Student student2 = (Student) context.getBean(<span class="string">&quot;stu&quot;</span>);</span><br></pre></td></tr></table></figure>
+
 
 <h4 id="2-3-IoC和DI"><a href="#2-3-IoC和DI" class="headerlink" title="2.3 IoC和DI"></a>2.3 IoC和DI</h4><ul>
 <li>IoC (Inverse of Control) 控制反转，通过Spring对象工厂完成对象的创建</li>
@@ -468,6 +470,7 @@ hexo d
 <p>当我们需要通过Spring对象工厂创建某个类的对象时候，需要将这个交给Spring管理——通过bean标签配置</p>
 </blockquote>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--通过bean将实体类配置给Spring进行管理,id表示实体类的唯一表示--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;stu&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.qfedu.ioc.bean.Student&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;book&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.qfedu.ioc.bean.Book&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 
 <h6 id="2-3-2-DI"><a href="#2-3-2-DI" class="headerlink" title="2.3.2 DI"></a>2.3.2 DI</h6><blockquote>
 <p>通过Spring容器给创建的对象属性赋值</p>
@@ -1655,6 +1658,42 @@ hexo d
       <tags>
         <tag>Java</tag>
         <tag>SpringMVC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Excel 常见命令</title>
+    <url>/2022/09/05/excelUse/</url>
+    <content><![CDATA[<blockquote>
+<h3 id="excel常见的几个命令记录"><a href="#excel常见的几个命令记录" class="headerlink" title="excel常见的几个命令记录"></a>excel常见的几个命令记录</h3></blockquote>
+<ul>
+<li><strong>countifs</strong> </li>
+<li><strong>trim</strong></li>
+<li><strong>if</strong></li>
+</ul>
+<blockquote>
+<h2 id="trim-删除单元格中的空格"><a href="#trim-删除单元格中的空格" class="headerlink" title="trim 删除单元格中的空格"></a>trim 删除单元格中的空格</h2><p>当使用countifs函数来计算符合某种条件下字符串的个数时，会出现搜索结果小于正确结果的情况</p>
+<p>造成这种结果的原因是因为，单元格中字符带有空格</p>
+<p>使用 <em><strong>trim()</strong></em> 函数消除空白字符在使用 ***countifs()***函数</p>
+</blockquote>
+<pre><code>=trim（F5:F110） //消除F5到F110中的空格
+</code></pre>
+<blockquote>
+<h2 id="conuntifs函数计算某种条件下的数量"><a href="#conuntifs函数计算某种条件下的数量" class="headerlink" title="conuntifs函数计算某种条件下的数量"></a>conuntifs函数计算某种条件下的数量</h2></blockquote>
+<pre><code>=COUNTIFS(F5:F110,F109,I5:I110,G124)  //计算的是行数是F5到F110中值为F109的并且 行数I5:I110中值是G124的总数
+
+=COUNTFS(F5:F110,&quot;**天&quot;,I5:I110,&quot;第**&quot;) //计算行数是F5到F110中是以“天”结尾， ，I5到I110中是以“第”开头的个数
+</code></pre>
+<blockquote>
+<h2 id="if-函数的用法"><a href="#if-函数的用法" class="headerlink" title="if 函数的用法"></a>if 函数的用法</h2></blockquote>
+<pre><code>=IF(C2=&quot;YES&quot;,1,2) //类似三元运算符，如果c2=“yes&quot;,返回1，否则返回2
+</code></pre>
+]]></content>
+      <categories>
+        <category>文章</category>
+      </categories>
+      <tags>
+        <tag>文章</tag>
+        <tag>excel</tag>
       </tags>
   </entry>
 </search>
