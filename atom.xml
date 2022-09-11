@@ -6,7 +6,7 @@
   <link href="https://itcxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://itcxx.github.io/"/>
-  <updated>2022-09-10T05:51:55.591Z</updated>
+  <updated>2022-09-11T06:03:40.564Z</updated>
   <id>https://itcxx.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Conda常见的命令</title>
+    <link href="https://itcxx.github.io/2022/09/11/conda_order/"/>
+    <id>https://itcxx.github.io/2022/09/11/conda_order/</id>
+    <published>2022-09-11T04:53:26.631Z</published>
+    <updated>2022-09-11T06:03:40.564Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-获取conda相关信息&quot;&gt;&lt;a href=&quot;#1-获取conda相关信息&quot; class=&quot;headerlink&quot; title=&quot;1. 获取conda相关信息&quot;&gt;&lt;/a&gt;1. 获取conda相关信息&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;conda</summary>
+        
+      
+    
+    
+    
+    <category term="文章" scheme="https://itcxx.github.io/categories/%E6%96%87%E7%AB%A0/"/>
+    
+    
+    <category term="文章" scheme="https://itcxx.github.io/tags/%E6%96%87%E7%AB%A0/"/>
+    
+    <category term="conda" scheme="https://itcxx.github.io/tags/conda/"/>
+    
+  </entry>
   
   <entry>
     <title>Excel 常见命令</title>

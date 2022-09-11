@@ -1696,4 +1696,91 @@ hexo d
         <tag>excel</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Conda常见的命令</title>
+    <url>/2022/09/11/conda_order/</url>
+    <content><![CDATA[<h2 id="1-获取conda相关信息"><a href="#1-获取conda相关信息" class="headerlink" title="1. 获取conda相关信息"></a>1. 获取conda相关信息</h2><pre><code>conda --version
+conda -V  //获取版本号
+
+conda --help
+conda -h //获取帮助
+
+conda update --help //获取update命令的更新帮助
+
+conda env -h   //获取环境管理的相关命令
+
+conda list  //获取当前环境下的所有包信息
+conda list -n your_env_name //获取指定环境下所有的包信息
+conda install -n env_name package_name  //为指定环境安装某个包
+</code></pre>
+<h2 id="2-创建环境"><a href="#2-创建环境" class="headerlink" title="2. 创建环境"></a>2. 创建环境</h2><pre><code>conda create --name your_env_name
+</code></pre>
+<ul>
+<li>创建特定的python环境方式</li>
+</ul>
+<pre><code>conda create --name your_env_name python=3.6  //创建环境，并且python指定为3.6
+conda create --name your_env_name python=3.6 numpy scipy  //创建环境，指定python版本，并添加numpy,scipy包
+</code></pre>
+<h2 id="3-环境相关操作"><a href="#3-环境相关操作" class="headerlink" title="3. 环境相关操作"></a>3. 环境相关操作</h2><ul>
+<li>列举当前所有环境</li>
+</ul>
+<pre><code>conda info --envs
+conda env list
+</code></pre>
+<ul>
+<li>进入某个环境 </li>
+</ul>
+<pre><code>conda activate your_env_name
+</code></pre>
+<ul>
+<li>退出某个环境</li>
+</ul>
+<pre><code>conda deactivate
+</code></pre>
+<ul>
+<li>复制某个环境</li>
+</ul>
+<pre><code>conda create --name new_env_name --clone old_env_name
+</code></pre>
+<ul>
+<li>删除某个环境</li>
+</ul>
+<pre><code>conda remove --name your_env_name --all
+</code></pre>
+<h2 id="4-通过-yml-文件创建和分享环境"><a href="#4-通过-yml-文件创建和分享环境" class="headerlink" title="4. 通过 .yml 文件创建和分享环境"></a>4. 通过 .yml 文件创建和分享环境</h2><blockquote>
+<p>###创建 .yml 文件</p>
+</blockquote>
+<blockquote>
+<p>1.进入要分享的环境</p>
+</blockquote>
+<pre><code>conda activate pytorchEnv
+</code></pre>
+<blockquote>
+<p>2.复制环境到.yml文件中</p>
+</blockquote>
+<pre><code> conda env export &gt; environment.yml
+</code></pre>
+<blockquote>
+<p>3.在工作路径中可以找到相应的 .yml文件</p>
+</blockquote>
+<img src="/images/conda/1.png">
+
+<blockquote>
+<p> ###使用 .yml文件</p>
+</blockquote>
+<ul>
+<li>拿到 environment.yml文件以后，将文件放在工作目录下，然后输入命令</li>
+</ul>
+<pre><code>conda env create -f environment.yml
+</code></pre>
+<p>这样就生成了相应的环境了</p>
+]]></content>
+      <categories>
+        <category>文章</category>
+      </categories>
+      <tags>
+        <tag>文章</tag>
+        <tag>conda</tag>
+      </tags>
+  </entry>
 </search>
