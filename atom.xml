@@ -6,7 +6,7 @@
   <link href="https://itcxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://itcxx.github.io/"/>
-  <updated>2022-09-11T06:03:40.564Z</updated>
+  <updated>2022-09-28T14:12:31.886Z</updated>
   <id>https://itcxx.github.io/</id>
   
   <author>
@@ -15,6 +15,93 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>panda数据处理</title>
+    <link href="https://itcxx.github.io/2022/09/28/pandaNote/"/>
+    <id>https://itcxx.github.io/2022/09/28/pandaNote/</id>
+    <published>2022-09-28T14:09:23.021Z</published>
+    <updated>2022-09-28T14:12:31.886Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;panda 读取到的csv datafram中&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# df=pd.read_csv(&amp;quot;xxxxx&amp;quot;)
+# print(df[&amp;#39;0&amp;#39;].values)  #读取第0列的所有数
+# </summary>
+        
+      
+    
+    
+    
+    <category term="数据处理" scheme="https://itcxx.github.io/categories/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="pandas" scheme="https://itcxx.github.io/tags/pandas/"/>
+    
+    <category term="numpy" scheme="https://itcxx.github.io/tags/numpy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reinforcement Learning 01</title>
+    <link href="https://itcxx.github.io/2022/09/14/RL/RL_01_review/"/>
+    <id>https://itcxx.github.io/2022/09/14/RL/RL_01_review/</id>
+    <published>2022-09-14T04:03:19.138Z</published>
+    <updated>2022-09-21T07:50:14.665Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;强化学习-第一讲-简介&quot;&gt;&lt;a href=&quot;#强化学习-第一讲-简介&quot; class=&quot;headerlink&quot; title=&quot;强化学习 - 第一讲 简介&quot;&gt;&lt;/a&gt;强化学习 - 第一讲</summary>
+        
+      
+    
+    
+    
+    <category term="RL" scheme="https://itcxx.github.io/categories/RL/"/>
+    
+    
+    <category term="RL" scheme="https://itcxx.github.io/tags/RL/"/>
+    
+    <category term="强化学习" scheme="https://itcxx.github.io/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="RL01" scheme="https://itcxx.github.io/tags/RL01/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reinformation Learning 笔记目录</title>
+    <link href="https://itcxx.github.io/2022/09/14/RL_Content/"/>
+    <id>https://itcxx.github.io/2022/09/14/RL_Content/</id>
+    <published>2022-09-14T04:01:32.441Z</published>
+    <updated>2022-09-21T05:33:53.656Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;h4 id=&quot;Reinforcement-learning-笔记目录&quot;&gt;&lt;a href=&quot;#Reinforcement-learning-笔记目录&quot; class=&quot;headerlink&quot; title=&quot;Reinforcement learning</summary>
+        
+      
+    
+    
+    
+    <category term="RL" scheme="https://itcxx.github.io/categories/RL/"/>
+    
+    
+    <category term="RL" scheme="https://itcxx.github.io/tags/RL/"/>
+    
+    <category term="RL Content" scheme="https://itcxx.github.io/tags/RL-Content/"/>
+    
+  </entry>
   
   <entry>
     <title>Conda常见的命令</title>

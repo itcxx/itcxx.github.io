@@ -1783,4 +1783,101 @@ conda env list
         <tag>conda</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Reinformation Learning 笔记目录</title>
+    <url>/2022/09/14/RL_Content/</url>
+    <content><![CDATA[<blockquote>
+<h4 id="Reinforcement-learning-笔记目录"><a href="#Reinforcement-learning-笔记目录" class="headerlink" title="Reinforcement learning 笔记目录"></a>Reinforcement learning 笔记目录</h4></blockquote>
+<blockquote>
+<p>关联笔记链接<br>###该笔记主要记录强化学习的关联笔记</p>
+</blockquote>
+<ul>
+<li><a href="%22./RL/RL_01_review/">Reinforcement Learning reviews</a></li>
+<li><a href="">xx</a></li>
+<li><a href="">xx</a></li>
+<li><a href="">xx</a></li>
+<li><a href="">xx</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>RL</category>
+      </categories>
+      <tags>
+        <tag>RL</tag>
+        <tag>RL Content</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reinforcement Learning 01</title>
+    <url>/2022/09/14/RL/RL_01_review/</url>
+    <content><![CDATA[<h3 id="强化学习-第一讲-简介"><a href="#强化学习-第一讲-简介" class="headerlink" title="强化学习 - 第一讲 简介"></a>强化学习 - 第一讲 简介</h3><blockquote>
+<p>强化学习期间的笔记，记录什么是强化学习，解决的问题，概念和原理</p>
+</blockquote>
+<h4 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h4><p>强化学习在不同领域有不同的表现形式：神经科学、心理学、计算机科学、工程领域、数学、经济学等有不同的称呼。</p>
+<p>强化学习是机器学习的一个分支：监督学习、无监督学习、强化学习</p>
+<p>强化学习的特点：    </p>
+<ul>
+<li>没有监督数据，只有奖励信号</li>
+<li>奖励信号不一定是实时的，可能是延后，有时会延后很久</li>
+<li>时间序列是一个很重要的因素</li>
+<li>当前的行为影响后续接受到的数据</li>
+</ul>
+<h4 id="强化学习的概念"><a href="#强化学习的概念" class="headerlink" title="强化学习的概念"></a>强化学习的概念</h4><blockquote>
+<p><strong>奖励 Reward</strong></p>
+</blockquote>
+<p>Rt是个信号的反馈，是个标量，反应个体在t时刻做的怎么样，个体的工作就是最大化累计奖励。</p>
+<pre><code>Reward Hypothesis： 
+
+所有问题解决的目标都是可以被描述成最大化累计奖励
+</code></pre>
+<blockquote>
+<p><strong>序列决策 Sequential Decision Making</strong></p>
+</blockquote>
+<p>目标： 选择一定的行为序列以最大化未来的总体奖励<br>这些行为可能是一个长期的序列<br>奖励可能而且通常是延迟的<br>有售后宁愿牺牲短期的奖励而获得更多的长期奖励</p>
+<blockquote>
+<p>个体和环境 Agent &amp; Environment</p>
+</blockquote>
+<p>可以从个体和环境两个方面来描叙强化学习问题</p>
+<p>在t时刻，个体可以：  </p>
+<ol>
+<li>有一个对于环境的观察评估Q<sub>t</sub></li>
+<li>做出一个行为A<sub>t</sub></li>
+<li>从环境得到一个奖励信息R<sub>t+1</sub></li>
+</ol>
+<p>环境可以：</p>
+<ol>
+<li>接收个体的动作A<sub>t</sub></li>
+<li>更新环境信息，同时使得个体可以得到下一个观测Q<sub>t+1</sub></li>
+<li>给个体一个奖励信号R<sub>t+1</sub></li>
+</ol>
+]]></content>
+      <categories>
+        <category>RL</category>
+      </categories>
+      <tags>
+        <tag>RL</tag>
+        <tag>强化学习</tag>
+        <tag>RL01</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>panda数据处理</title>
+    <url>/2022/09/28/pandaNote/</url>
+    <content><![CDATA[<p>panda 读取到的csv datafram中</p>
+<pre><code># df=pd.read_csv(&quot;xxxxx&quot;)
+# print(df[&#39;0&#39;].values)  #读取第0列的所有数
+#  print(df.iloc[0].values)    #读取指定行0的所有数
+</code></pre>
+<p>numpy中</p>
+<pre><code>df.flatten()   #将df变成一维的形式
+</code></pre>
+]]></content>
+      <categories>
+        <category>数据处理</category>
+      </categories>
+      <tags>
+        <tag>pandas</tag>
+        <tag>numpy</tag>
+      </tags>
+  </entry>
 </search>
