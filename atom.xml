@@ -6,7 +6,7 @@
   <link href="https://itcxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://itcxx.github.io/"/>
-  <updated>2022-09-28T14:12:31.886Z</updated>
+  <updated>2022-10-07T07:58:46.852Z</updated>
   <id>https://itcxx.github.io/</id>
   
   <author>
@@ -21,17 +21,17 @@
     <link href="https://itcxx.github.io/2022/09/28/pandaNote/"/>
     <id>https://itcxx.github.io/2022/09/28/pandaNote/</id>
     <published>2022-09-28T14:09:23.021Z</published>
-    <updated>2022-09-28T14:12:31.886Z</updated>
+    <updated>2022-10-07T07:58:46.852Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;panda 读取到的csv datafram中&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# df=pd.read_csv(&amp;quot;xxxxx&amp;quot;)
-# print(df[&amp;#39;0&amp;#39;].values)  #读取第0列的所有数
-# </summary>
+    <summary type="html">&lt;p&gt;panda 读取到的csv datafram中：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# df=pd.read_csv(&amp;quot;/xxx/xx&amp;quot;)
+# df=pd.read_csv(&amp;quot;/xxx/&amp;quot;,nrows=15) #只读取前15行
+#</summary>
         
       
     
