@@ -6,7 +6,7 @@
   <link href="https://itcxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://itcxx.github.io/"/>
-  <updated>2023-03-09T09:28:04.328Z</updated>
+  <updated>2023-03-09T11:27:39.777Z</updated>
   <id>https://itcxx.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>adminTest</title>
+    <link href="https://itcxx.github.io/2023/03/09/adminTest/"/>
+    <id>https://itcxx.github.io/2023/03/09/adminTest/</id>
+    <published>2023-03-09T09:30:00.000Z</published>
+    <updated>2023-03-09T11:27:39.777Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这是一个测试帖子用于测试hexo-admin&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;test&quot;&gt;&lt;a href=&quot;#test&quot; class=&quot;headerlink&quot; title=&quot;test&quot;&gt;&lt;/a&gt;test&lt;/h3&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="admin" scheme="https://itcxx.github.io/tags/admin/"/>
+    
+  </entry>
   
   <entry>
     <title>panda数据处理</title>
