@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>adminTest |  CXX</title>
+      <title>Latex 用法 |  CXX</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/xin.png" />
@@ -43,7 +43,7 @@
         }
       </style>
     <link rel="alternate" href="/atom.xml" title="CXX" type="application/atom+xml">
-</head>
+<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
   </html>
 </html>
 
@@ -55,7 +55,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-adminTest"
+  id="post-atex"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -66,7 +66,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  adminTest
+  Latex 用法
 </h1>
  
 
@@ -74,15 +74,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/09/adminTest/" class="article-date">
-  <time datetime="2023-03-09T09:30:00.000Z" itemprop="datePublished">2023-03-09</time>
+      <a href="/2023/03/09/atex/" class="article-date">
+  <time datetime="2023-03-09T12:38:22.000Z" itemprop="datePublished">2023-03-09</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">15</span>
+            <span class="post-count">43</span>
         </span>
     </span>
 
@@ -106,13 +106,21 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <blockquote>
-<p>这是一个测试帖子用于测试hexo-admin</p>
-</blockquote>
-<h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><p><img src="/images/pasted-0.png" alt="upload successful"></p>
-<p><img src="/images/Springimgs/1616728103181.png" alt="1616728103181"></p>
-<p><img src="/images/Springimgs/1616728103181.png" alt="1616728103181"></p>
-<p><img src="/images/pasted-1.png" alt="upload successful"></p>
+  <ul>
+<li>数学公式参考!<br>
+<a target="_blank" rel="noopener" href="https://zilutian.github.io/latex-tutorial-chinese/">官方文档</a></li>
+</ul>
+<h3 id="符号和公式">符号和公式</h3>
+<ul>
+<li>
+<p>如果是在同一行，使用</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span></span></p>
+</li>
+<li>
+<p>如果要另起一行，使用\[表达式\]，或者$$表达式$$</p>
+</li>
+</ul>
  
       <!-- reward -->
       
@@ -177,18 +185,25 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://itcxx.github.io/2023/03/09/adminTest/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://itcxx.github.io/2023/03/09/atex/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/admin/" rel="tag">admin</a></li></ul>
-
     </footer>
   </div>
 
    
   <nav class="article-nav">
+    
+      <a href="/2023/03/18/python-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            python 文件操作
+          
+        </div>
+      </a>
     
     
       <a href="/2022/09/28/pandaNote/" class="article-nav-link">
@@ -521,9 +536,42 @@
     viewer_init()
 </script> 
 <!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
 
 <!-- Katex -->
-
+ 
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css">
+        
+    
+ 
 <!-- busuanzi  -->
  
 <script src="/js/busuanzi-2.3.pure.min.js"></script>
@@ -601,23 +649,6 @@
 </script>
 
 
-    
-    <div id="music">
-    
-    
-    
-    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="86"
-        src="//music.163.com/outchain/player?type=2&id=22707008&auto=0&height=66"></iframe>
-</div>
-
-<style>
-    #music {
-        position: fixed;
-        right: 15px;
-        bottom: 0;
-        z-index: 998;
-    }
-</style>
     
     
 

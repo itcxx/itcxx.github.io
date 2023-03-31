@@ -43,7 +43,7 @@
         }
       </style>
     <link rel="alternate" href="/atom.xml" title="CXX" type="application/atom+xml">
-</head>
+<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
   </html>
 </html>
 
@@ -86,7 +86,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.2k</span>
+            <span class="post-count">1.1k</span>
         </span>
     </span>
 
@@ -95,7 +95,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">6 min</span>
+            <span class="post-count">5 min</span>
         </span>
     </span>
 </div>
@@ -115,7 +115,7 @@
 # df=pd.read_csv(&quot;/xxx/&quot;,nrows=15) #只读取前15行
 # df=pd.read_csv(&quot;/xxx/&quot;,skiprows=9,nrows=5) #跳过前9行，往下读5行
 # df=pd.read_csv(&quot;/xxx/.csv&quot;, usecols=[0]))  #只读第一列的数据
-# print(df[&#39;0&#39;].values)  #读取第0列的所有数
+# print(df['0'].values)  #读取第0列的所有数
 
 df.info()   #读取信息
 df.head(10)  #读取前十行
@@ -125,23 +125,25 @@ df.values   #读取内容
 df.describe() #返回所有数值的列的统计各种信息，平均值，个数等，
 </code></pre>
 <p>类型转换：</p>
-<pre><code>data=&#123;&#39;country&#39;:[&#39;aaa&#39;,&#39;bbb&#39;,&#39;ccc&#39;],
-        &#39;population&#39;:[10,12,23]&#125;
+<pre><code>data=&#123;'country':['aaa','bbb','ccc'],
+        'population':[10,12,23]&#125;
 
 df_data=pd.DataFrame(data)  #转换成dataframe类型
 </code></pre>
 <p>设置索引：</p>
-<pre><code>df=df.set_index(&#39;Name&#39;)  #将名字所在的列设置为索引值
+<pre><code>df=df.set_index('Name')  #将名字所在的列设置为索引值
 </code></pre>
-<h4 id="loc-和-iloc"><a href="#loc-和-iloc" class="headerlink" title="loc 和 iloc"></a>loc 和 iloc</h4><blockquote>
-<p>loc 用label定位，（字符）<br>iloc用position 来定位（数字）</p>
+<h4 id="loc-和-iloc">loc 和 iloc</h4>
+<blockquote>
+<p>loc 用label定位，（字符）<br>
+iloc用position 来定位（数字）</p>
 </blockquote>
-<p><strong>loc():</strong> </p>
-<pre><code># df.set_index(&#39;5&#39;)    #设置columns为’5‘的列为index列
-#df.loc[&#39;Iris-virginica&#39;]   #返回所有index为Iris-virginica的行（前提是：index为Iris-virginica的字符类型）
+<p><strong>loc():</strong></p>
+<pre><code># df.set_index('5')    #设置columns为’5‘的列为index列
+#df.loc['Iris-virginica']   #返回所有index为Iris-virginica的行（前提是：index为Iris-virginica的字符类型）
 
-df.loc[df[&#39;Sex&#39;]==&#39;male&#39;,&#39;Age&#39;] #返回Sex列为male中所有Age的值
-df.loc[df[&#39;Sex&#39;]==&#39;male&#39;,&#39;Age&#39;].mean()  ##返回Sex列为male中所有Age的值平均值
+df.loc[df['Sex']=='male','Age'] #返回Sex列为male中所有Age的值
+df.loc[df['Sex']=='male','Age'].mean()  ##返回Sex列为male中所有Age的值平均值
 </code></pre>
 <p>读取特定的行数: iloc()：</p>
 <pre><code># print(df.iloc[0])  #第一行
@@ -153,33 +155,36 @@ df.loc[df[&#39;Sex&#39;]==&#39;male&#39;,&#39;Age&#39;].mean()  ##返回Sex列�
 <p>也可以：</p>
 <pre><code>df[3:10]  #读取第四行到第十行
 df[&quot;列的名字&quot;]  #查看某一列的值
-df[[&#39;age&#39;,&#39;fare&#39;]] #读取age,fare两个列的数值
-df[[&#39;age&#39;,&#39;fare&#39;]][:5] #只读前5行，
+df[['age','fare']] #读取age,fare两个列的数值
+df[['age','fare']][:5] #只读前5行，
 </code></pre>
 <p>读取特定的列：</p>
-<pre><code>age=df[&#39;Age&#39;]  #读取columns为Age的那一列
+<pre><code>age=df['Age']  #读取columns为Age的那一列
                 #返回的age类型为series
 age.index     #age的索引值
 age.values[:5] #读取前5个values的值
 </code></pre>
-<h4 id="bool类型的读取方式"><a href="#bool类型的读取方式" class="headerlink" title="bool类型的读取方式"></a>bool类型的读取方式</h4><pre><code>df[&#39;Fare&#39;]&gt;40  #读取columns为fare的行返回True,False的值
-df[df[&#39;Fare&#39;]&gt;5] #返回的是所有fare&gt;5的行的数据
-df[df[&#39;sex&#39;]==&#39;male&#39;] #返回所有性别为男的数据
+<h4 id="bool类型的读取方式">bool类型的读取方式</h4>
+<pre><code>df['Fare']&gt;40  #读取columns为fare的行返回True,False的值
+df[df['Fare']&gt;5] #返回的是所有fare&gt;5的行的数据
+df[df['sex']=='male'] #返回所有性别为男的数据
 </code></pre>
-<h4 id="其它操作"><a href="#其它操作" class="headerlink" title="其它操作"></a>其它操作</h4><pre><code>(df[&#39;Age&#39;]&gt;70).sum()   #返回age列中age&gt;70的个数
+<h4 id="其它操作">其它操作</h4>
+<pre><code>(df['Age']&gt;70).sum()   #返回age列中age&gt;70的个数
 </code></pre>
-<h4 id="groupby-操作"><a href="#groupby-操作" class="headerlink" title="groupby 操作"></a>groupby 操作</h4><p>创建数据：</p>
-<pre><code>df=pd.DataFrame(&#123;&#39;key&#39;:[&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;A&#39;,&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;A&#39;,&#39;B&#39;],
-                &#39;data&#39;:[0,2,3,4,5,6,7,8,9]&#125;)
+<h4 id="groupby-操作">groupby 操作</h4>
+<p>创建数据：</p>
+<pre><code>df=pd.DataFrame(&#123;'key':['A','B','C','A','A','B','C','A','B'],
+                'data':[0,2,3,4,5,6,7,8,9]&#125;)
 </code></pre>
-<p><strong>计算key=’A’的情况， data的总和</strong></p>
-<pre><code>(df.loc[df[&#39;key&#39;]==&#39;A&#39;,&#39;data&#39;]).sum()
+<p><strong>计算key='A’的情况， data的总和</strong></p>
+<pre><code>(df.loc[df['key']=='A','data']).sum()
 
 out:
     17
 </code></pre>
 <p><strong>groupby()</strong></p>
-<pre><code>df.groupby(&#39;key&#39;).sum() #对key进行分类，返回类型的总和
+<pre><code>df.groupby('key').sum() #对key进行分类，返回类型的总和
 Out[59]: 
         data
     key      
@@ -187,14 +192,16 @@ Out[59]:
     B      17
     C      10
 </code></pre>
-<h3 id="数值运算："><a href="#数值运算：" class="headerlink" title="数值运算："></a>数值运算：</h3><pre><code>df=pd.DataFrame([[1,2,3],[4,5,6]],index=[&#39;a&#39;,&#39;b&#39;],columns=[&#39;A&#39;,&#39;B&#39;,&#39;C&#39;])
+<h3 id="数值运算：">数值运算：</h3>
+<pre><code>df=pd.DataFrame([[1,2,3],[4,5,6]],index=['a','b'],columns=['A','B','C'])
     
     Out[62]: 
        A  B  C
     a  1  2  3
     b  4  5  6    
 </code></pre>
-<h4 id="df-sum"><a href="#df-sum" class="headerlink" title="df.sum()"></a>df.sum()</h4><pre><code># df.sum() 默认对每列进行求和
+<h4 id="df-sum">df.sum()</h4>
+<pre><code># df.sum() 默认对每列进行求和
 df.sum()
 
     Out[63]: 
@@ -203,7 +210,8 @@ df.sum()
     C    9
     dtype: int64
 </code></pre>
-<h4 id="df-sum-axis-0"><a href="#df-sum-axis-0" class="headerlink" title="df.sum(axis=0)"></a>df.sum(axis=0)</h4><pre><code>#df.sum(axis=0) 0：对列求和，1：对行求和
+<h4 id="df-sum-axis-0">df.sum(axis=0)</h4>
+<pre><code>#df.sum(axis=0) 0：对列求和，1：对行求和
 # axis=0
     df.sum(axis=0)
     Out[64]: 
@@ -212,34 +220,39 @@ df.sum()
     C    9
     dtype: int64
 </code></pre>
-<h4 id="df-sum-axis-1"><a href="#df-sum-axis-1" class="headerlink" title="df.sum(axis=1)"></a>df.sum(axis=1)</h4><pre><code># axis=1
+<h4 id="df-sum-axis-1">df.sum(axis=1)</h4>
+<pre><code># axis=1
     df.sum(axis=1)
     Out[65]: 
     a     6
     b    15
     dtype: int64
 </code></pre>
-<h4 id="df-sum-axis-’columns’"><a href="#df-sum-axis-’columns’" class="headerlink" title="df.sum(axis=’columns’)"></a>df.sum(axis=’columns’)</h4><pre><code># axis=&#39;columns&#39;
-df.sum(axis=&#39;columns&#39;)
+<h4 id="df-sum-axis-columns">df.sum(axis=‘columns’)</h4>
+<pre><code># axis='columns'
+df.sum(axis='columns')
     Out[66]: 
     a     6
     b    15
     dtype: int64
 </code></pre>
-<h4 id="df-mean-axis-0"><a href="#df-mean-axis-0" class="headerlink" title="df.mean(axis=0)"></a>df.mean(axis=0)</h4><pre><code>#计算所有列的平均值
+<h4 id="df-mean-axis-0">df.mean(axis=0)</h4>
+<pre><code>#计算所有列的平均值
     Out[67]: 
     A    2.5
     B    3.5
     C    4.5
     dtype: float64  
 </code></pre>
-<h4 id="df-mean-axis-1"><a href="#df-mean-axis-1" class="headerlink" title="df.mean(axis=1)"></a>df.mean(axis=1)</h4><pre><code>#计算所有行的平均值
+<h4 id="df-mean-axis-1">df.mean(axis=1)</h4>
+<pre><code>#计算所有行的平均值
     Out[68]: 
     a    2.0
     b    5.0
     dtype: float64
 </code></pre>
-<h4 id="df-min"><a href="#df-min" class="headerlink" title="df.min()"></a>df.min()</h4><pre><code>    #返回每行的最小值
+<h4 id="df-min">df.min()</h4>
+<pre><code>    #返回每行的最小值
     df.mean(axis=1)
     Out[68]: 
     a    2.0
@@ -255,7 +268,8 @@ df.sum(axis=&#39;columns&#39;)
     C    3
     dtype: int64
 </code></pre>
-<h4 id="以下命令的使用的数据集格式为"><a href="#以下命令的使用的数据集格式为" class="headerlink" title="以下命令的使用的数据集格式为"></a>以下命令的使用的数据集格式为</h4><pre><code>Out[76]: 
+<h4 id="以下命令的使用的数据集格式为">以下命令的使用的数据集格式为</h4>
+<pre><code>Out[76]: 
          1    2    3    4            5
     0  5.1  3.5  1.4  0.2  Iris-setosa
     1  4.9  3.0  1.4  0.2  Iris-setosa
@@ -264,22 +278,25 @@ df.sum(axis=&#39;columns&#39;)
     4  5.0  3.6  1.4  0.2  Iris-setosa
         ...
 </code></pre>
-<h4 id="df-cov"><a href="#df-cov" class="headerlink" title="df.cov()"></a>df.cov()</h4><pre><code>    #返回协方差的对称矩阵
+<h4 id="df-cov">df.cov()</h4>
+<pre><code>    #返回协方差的对称矩阵
         1         2         3         4
     1  0.685694 -0.039268  1.273682  0.516904
     2 -0.039268  0.188004 -0.321713 -0.117981
     3  1.273682 -0.321713  3.113179  1.296387
     4  0.516904 -0.117981  1.296387  0.582414
 </code></pre>
-<h4 id="df-corr"><a href="#df-corr" class="headerlink" title="df.corr()"></a>df.corr()</h4><pre><code>    #返回相关系数
+<h4 id="df-corr">df.corr()</h4>
+<pre><code>    #返回相关系数
           1         2         3         4
     1  1.000000 -0.109369  0.871754  0.817954
     2 -0.109369  1.000000 -0.420516 -0.356544
     3  0.871754 -0.420516  1.000000  0.962757
     4  0.817954 -0.356544  0.962757  1.000000
 </code></pre>
-<h4 id="df-‘1’-value-counts"><a href="#df-‘1’-value-counts" class="headerlink" title="df[‘1’].value_counts()"></a>df[‘1’].value_counts()</h4><pre><code>    #返回的是列名为’1‘中的各种值的个数，默认为按照个数的降序
-    #升序可以设置为， df[&#39;1&#39;].value_counts(ascending=True)
+<h4 id="df-1-value-counts">df[‘1’].value_counts()</h4>
+<pre><code>    #返回的是列名为’1‘中的各种值的个数，默认为按照个数的降序
+    #升序可以设置为， df['1'].value_counts(ascending=True)
     
 Out[77]: 
     5.0    10     #值为5.0的有10个
@@ -290,7 +307,7 @@ Out[77]:
     5.5     7
     5.8     
 
-    #df[&#39;1&#39;].value_counts(ascending=True,bins=5)
+    #df['1'].value_counts(ascending=True,bins=5)
     #将列名为’1‘中的值从小到大的顺序分成5份，然后计算个数
 
     Out[78]: 
@@ -301,12 +318,15 @@ Out[77]:
         (5.74, 6.46]     42
         Name: 1, dtype: int64
 </code></pre>
-<h4 id="df-‘1’-count"><a href="#df-‘1’-count" class="headerlink" title="df[‘1’].count()"></a>df[‘1’].count()</h4><pre><code>    当前列的个数
+<h4 id="df-1-count">df[‘1’].count()</h4>
+<pre><code>    当前列的个数
 
-    df[&#39;1&#39;].count()
+    df['1'].count()
     Out[80]: 150
 </code></pre>
-<h3 id="对象操作"><a href="#对象操作" class="headerlink" title="对象操作"></a>对象操作</h3><h4 id="续。。。。"><a href="#续。。。。" class="headerlink" title="续。。。。"></a>续。。。。</h4> 
+<h3 id="对象操作">对象操作</h3>
+<h4 id="续">续。。。。</h4>
+ 
       <!-- reward -->
       
     </div>
@@ -383,11 +403,11 @@ Out[77]:
    
   <nav class="article-nav">
     
-      <a href="/2023/03/09/adminTest/" class="article-nav-link">
+      <a href="/2023/03/09/atex/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            adminTest
+            Latex 用法
           
         </div>
       </a>
@@ -723,9 +743,42 @@ Out[77]:
     viewer_init()
 </script> 
 <!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
 
 <!-- Katex -->
-
+ 
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css">
+        
+    
+ 
 <!-- busuanzi  -->
  
 <script src="/js/busuanzi-2.3.pure.min.js"></script>
@@ -803,23 +856,6 @@ Out[77]:
 </script>
 
 
-    
-    <div id="music">
-    
-    
-    
-    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="86"
-        src="//music.163.com/outchain/player?type=2&id=22707008&auto=0&height=66"></iframe>
-</div>
-
-<style>
-    #music {
-        position: fixed;
-        right: 15px;
-        bottom: 0;
-        z-index: 998;
-    }
-</style>
     
     
 

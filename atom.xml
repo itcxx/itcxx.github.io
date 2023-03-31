@@ -6,7 +6,7 @@
   <link href="https://itcxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://itcxx.github.io/"/>
-  <updated>2023-03-09T11:27:39.777Z</updated>
+  <updated>2023-03-18T08:40:18.171Z</updated>
   <id>https://itcxx.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>adminTest</title>
-    <link href="https://itcxx.github.io/2023/03/09/adminTest/"/>
-    <id>https://itcxx.github.io/2023/03/09/adminTest/</id>
-    <published>2023-03-09T09:30:00.000Z</published>
-    <updated>2023-03-09T11:27:39.777Z</updated>
+    <title>python 文件操作</title>
+    <link href="https://itcxx.github.io/2023/03/18/python-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/"/>
+    <id>https://itcxx.github.io/2023/03/18/python-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</id>
+    <published>2023-03-18T06:59:12.000Z</published>
+    <updated>2023-03-18T08:40:18.171Z</updated>
     
     
       
@@ -29,16 +29,42 @@
         
         
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;这是一个测试帖子用于测试hexo-admin&lt;/p&gt;
+&lt;p&gt;判断是文件还是文件夹&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;test&quot;&gt;&lt;a href=&quot;#test&quot; class=&quot;headerlink&quot; title=&quot;test&quot;&gt;&lt;/a&gt;test&lt;/h3&gt;&lt;p&gt;&lt;img</summary>
+&lt;pre&gt;&lt;code&gt;import os
+is os.path.isdir(path):
+	print(&#39;是文件夹&#39;)
+elif</summary>
         
       
     
     
     
     
-    <category term="admin" scheme="https://itcxx.github.io/tags/admin/"/>
+  </entry>
+  
+  <entry>
+    <title>Latex 用法</title>
+    <link href="https://itcxx.github.io/2023/03/09/atex/"/>
+    <id>https://itcxx.github.io/2023/03/09/atex/</id>
+    <published>2023-03-09T12:38:22.000Z</published>
+    <updated>2023-03-09T14:01:02.552Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;数学公式参考!&lt;br&gt;
+&lt;a href=&quot;https://zilutian.github.io/latex-tutorial-chinese/&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
     
   </entry>
   
@@ -47,7 +73,7 @@
     <link href="https://itcxx.github.io/2022/09/28/pandaNote/"/>
     <id>https://itcxx.github.io/2022/09/28/pandaNote/</id>
     <published>2022-09-28T14:09:00.000Z</published>
-    <updated>2023-03-09T09:28:04.328Z</updated>
+    <updated>2023-03-09T13:53:49.420Z</updated>
     
     
       
