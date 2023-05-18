@@ -44,6 +44,36 @@ elif</summary>
   </entry>
   
   <entry>
+    <title>多层感知机</title>
+    <link href="https://itcxx.github.io/2023/03/13/ML-FirstClass/"/>
+    <id>https://itcxx.github.io/2023/03/13/ML-FirstClass/</id>
+    <published>2023-03-13T05:04:00.000Z</published>
+    <updated>2023-03-31T05:33:30.605Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;感知机&quot;&gt;感知机&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;* 感知机是一个二分类模型
+* 它的求解算法等价于使用批量大小为1的梯度下降
+* 它不能拟合XOR函数(相同为假，相异为真）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="ML" scheme="https://itcxx.github.io/categories/ML/"/>
+    
+    
+    <category term="感知机" scheme="https://itcxx.github.io/tags/%E6%84%9F%E7%9F%A5%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Latex 用法</title>
     <link href="https://itcxx.github.io/2023/03/09/atex/"/>
     <id>https://itcxx.github.io/2023/03/09/atex/</id>

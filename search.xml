@@ -2179,4 +2179,74 @@ for root,dirs,files in os.walk(filePath,topdown=True):
 </code></pre>
 ]]></content>
   </entry>
+  <entry>
+    <title>多层感知机</title>
+    <url>/2023/03/13/ML-FirstClass/</url>
+    <content><![CDATA[<h3 id="感知机">感知机</h3>
+<pre><code>* 感知机是一个二分类模型
+* 它的求解算法等价于使用批量大小为1的梯度下降
+* 它不能拟合XOR函数(相同为假，相异为真）
+</code></pre>
+<p><img src="/images/pasted-1.png" alt="upload successful"></p>
+<p><strong>w,x做内积然后加上偏置b， 感知机是一个简单的二分类问题</strong></p>
+<ul>
+<li>相对于回归问题，回归输出的是一个实数</li>
+<li>softmax输出的是一系列概率值，可以做多分类</li>
+</ul>
+<h3 id="感知机的训练">感知机的训练</h3>
+<p><img src="/images/pasted-2.png" alt="upload successful"></p>
+<ul>
+<li>算法中如果<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">y_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>和 输出值小于等于0 ，则表示预测错误，需要跟新参数</li>
+</ul>
+<h3 id="xor-问题-minsk-rapert-1969">XOR 问题（Minsk&amp; Rapert, 1969)</h3>
+<ul>
+<li>感知机的问题是无法拟合XOR函数， 它只能产生线性分割面出来</li>
+</ul>
+<p><img src="/images/pasted-3.png" alt="upload successful"></p>
+<h3 id="多层感知机">多层感知机</h3>
+<p><img src="/images/pasted-4.png" alt="upload successful"></p>
+<ul>
+<li>如上图， 通过多个方式解决XOR问题，通过黄色和蓝色的分割，然后比较黄色划分的结果和蓝色划分结果，最后通过porduct分类</li>
+</ul>
+<p><img src="/images/pasted-5.png" alt="upload successful"></p>
+<p><img src="/images/pasted-6.png" alt="upload successful"></p>
+<ul>
+<li>激活函数必须使用非线性的，否则$ o $的输出任然是个线性的函数，等价于一个单层感知机</li>
+</ul>
+<blockquote>
+<p>激活函数</p>
+</blockquote>
+<p><img src="/images/pasted-7.png" alt="upload successful"></p>
+<p><img src="/images/pasted-8.png" alt="upload successful"></p>
+<p><img src="/images/pasted-9.png" alt="upload successful"></p>
+<h3 id="多分类">多分类</h3>
+<ul>
+<li>在输出层加了一个softmax()层</li>
+</ul>
+<p><img src="/images/pasted-10.png" alt="upload successful"></p>
+<p><img src="/images/pasted-12.png" alt="upload successful"></p>
+<ul>
+<li>和但分类的区别是输出层从m 变成了 m x k</li>
+<li>输出增加一个softmax层</li>
+</ul>
+<p><img src="/images/pasted-13.png" alt="upload successful"></p>
+<ul>
+<li>多隐藏层中每层都应该添加激活函数，如果不添加就等于减少一层。</li>
+</ul>
+<p>总结：</p>
+<ul>
+<li>多层感知机使用隐藏层和激活函数来得到非线性模型</li>
+<li>常见激活函数是Sigmoid ，Tanh, ReLU</li>
+<li>使用softmax来处理多分类问题</li>
+<li>超参数为隐藏层数，和各个隐藏层大小</li>
+</ul>
+<p>** 本文章来自对沐神的[课程总结]（<a href="https://www.bilibili.com/video/BV1hh411U7gn/?spm_id_from=333.999.0.0&amp;vd_source=ab7b53f789ecf6dd41c74d59dff5a273">https://www.bilibili.com/video/BV1hh411U7gn/?spm_id_from=333.999.0.0&amp;vd_source=ab7b53f789ecf6dd41c74d59dff5a273</a>)</p>
+]]></content>
+      <categories>
+        <category>ML</category>
+      </categories>
+      <tags>
+        <tag>感知机</tag>
+      </tags>
+  </entry>
 </search>
