@@ -2414,4 +2414,156 @@ Each position has a unique positional vector <span class="katex"><span class="ka
         <tag>self attention</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Transformer</title>
+    <url>/2023/05/20/Transformer/</url>
+    <content><![CDATA[<h4 id="transformer">Transformer</h4>
+<ul>
+<li>
+<p>self attention<a href="https://itcxx.github.io/2023/04/22/%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6/">知识回顾</a></p>
+</li>
+<li>
+<p>李宏毅老师NLP<a href="https://speech.ee.ntu.edu.tw/~hylee/dlhlp/2020-spring.html">课程</a></p>
+</li>
+<li>
+<p>Transformer<a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a></p>
+<p>transformer 是一个Sequence to sequence的模型，模型的输出大小是由模型自己决定。</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1409.32.15">sequence to sequence Learning with Neural network</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1909.03434">Seq2seq for Multi-label Classification</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1707.05495">Seq2seq for Multi-label Classification</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2005.12872">Seq2seq for Object detection</a></p>
+</li>
+</ul>
+<h4 id="transformer总体结构">Transformer总体结构</h4>
+<p><img src="/images/pasted-42.png" alt="from paper attention is all you need"></p>
+<h4 id="encoder部分">encoder部分</h4>
+<p><img src="/images/pasted-43.png" alt="upload successful"></p>
+<p><img src="/images/pasted-44.png" alt="upload successful"></p>
+<ul>
+<li>图中Multi-head Attention 使用的是多头self-attention, 数据使用前增加Positional Encoding(位置编码）</li>
+<li>Norm : 采用的是Layer Normalization<a href="https://arxiv.org/abs/1607.06450"></a></li>
+</ul>
+<h4 id="decoder部分">decoder部分</h4>
+<pre><code>decoder 通常分为Autoregressive decoder (AT)和 Non-autoregresive decoder(NAT)
+</code></pre>
+<blockquote>
+<p>Autoregressive decoder(AT自回归解码）</p>
+</blockquote>
+<ul>
+<li>在Decoder中将自己的前输出当作后面的输入</li>
+</ul>
+<p><img src="/images/pasted-45.png" alt="upload successful"></p>
+<p><img src="/images/pasted-46.png" alt="upload successful"></p>
+<blockquote>
+<p>encoder 和 decoder的不同之处</p>
+</blockquote>
+<ul>
+<li>相对于encoder , decoder增加了红色部分,使用masked 多头注意了机制</li>
+</ul>
+<p><img src="/images/pasted-47.png" alt="upload successful"></p>
+<ul>
+<li>masked self-attention:</li>
+</ul>
+<p><img src="/images/pasted-48.png" alt="upload successful"></p>
+<pre><code>如上图所以，当计算b2的时候，只考虑前面的a1,a2部分向量，同理计算b3时只考虑前面的a1，a2,a3这三个向量。当前的输出只通过之前的输入向量计算
+</code></pre>
+<ul>
+<li>
+<p>Why masked?</p>
+<p>:因为按照decoder的实现机理，decoder的输入是前序列的输出，所以当前的输出是无法考虑到后面的输入向量的，因为后面的输入向量还没有计算出来。</p>
+</li>
+<li>
+<p>如何终止输出？</p>
+<p>添加终止token END</p>
+</li>
+</ul>
+<blockquote>
+<p>Non-autoregressive(NAT)</p>
+</blockquote>
+<p>AT：<br>
+AT是逐步输出从begin开始，知道输出END为止</p>
+<p>NAT:<br>
+NAT是一次性输出，一次就产生一个句子出来，不是一次只产生一个单词</p>
+<p><img src="/images/pasted-49.png" alt="upload successful"></p>
+<h4 id="encoder-decoder的连接">encoder-decoder的连接</h4>
+<p><a href="https://arxiv.org/abs/2005.08081">Cross Attention</a></p>
+<p><img src="/images/pasted-50.png" alt="upload successful"></p>
+<ul>
+<li>
+<p>cross attention 部分有两个输入来自encoder部分，一个来自decoder</p>
+</li>
+<li>
+<p>如下图：</p>
+<p>decoder提供了q,encoder提供k,v，通过q和k计算出注意力分数a,然后通过a,v计算出V， 然后传入到decoder中的FeedForward中</p>
+</li>
+</ul>
+<p><img src="/images/pasted-51.png" alt="upload successful"></p>
+<p><img src="/images/pasted-52.png" alt="upload successful"></p>
+<h4 id="training过程">Training过程</h4>
+<p><img src="/images/pasted-53.png" alt="upload successful"></p>
+<p>：上图以语音识别为例</p>
+<ul>
+<li>
+<p>Encoder的输入是一段语音序列</p>
+</li>
+<li>
+<p>Decoder的输入是正确的Label</p>
+</li>
+<li>
+<p>需要做的是将Decoder的输出为Label+END</p>
+</li>
+<li>
+<p>最小化decoder的输出值和Label的交叉熵的最小值（类似多分类问题)</p>
+<p>训练的时候Decoder的输入为正确的答案Label，但是测试的时候是没有Label的，所以当decoder的输入为错误的值的时候,后面就会连续的出现错误</p>
+</li>
+<li>
+<p>在训练的时候添加错误的信息</p>
+</li>
+</ul>
+<p><img src="/images/pasted-56.png" alt="upload successful"></p>
+<blockquote>
+<p>Copy Mechanism</p>
+</blockquote>
+<p><a href="https://arxiv.org/abs/1603.06393">copy Mechanism</a></p>
+<ul>
+<li>有些项目中，模型需要做的是复制输入的某些序列，而不是重新创造。
+<ul>
+<li>利于下图的对话中，人名，特需名称</li>
+<li>做文章的摘要的项目中summarization,从文章中复制内容</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/pasted-54.png" alt="upload successful"></p>
+<blockquote>
+<p>Guided Attention</p>
+</blockquote>
+<ul>
+<li>引导模型在attention的时候有一个固定的模式</li>
+</ul>
+<p>例如：在做语音合成的时候，需要从左到右依次合成语音</p>
+<p><img src="/images/pasted-55.png" alt="upload successful"></p>
+<ul>
+<li>Monotonic Attention</li>
+<li>Location-aware attention</li>
+</ul>
+<blockquote>
+<p>BLEU score</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>ML</category>
+      </categories>
+      <tags>
+        <tag>Transformer</tag>
+        <tag>Seq2seq</tag>
+      </tags>
+  </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="https://itcxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://itcxx.github.io/"/>
-  <updated>2023-05-20T11:55:21.380Z</updated>
+  <updated>2023-05-21T05:32:19.167Z</updated>
   <id>https://itcxx.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Transformer</title>
+    <link href="https://itcxx.github.io/2023/05/20/Transformer/"/>
+    <id>https://itcxx.github.io/2023/05/20/Transformer/</id>
+    <published>2023-05-20T14:51:00.000Z</published>
+    <updated>2023-05-21T05:32:19.167Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;transformer&quot;&gt;Transformer&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;self attention&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="ML" scheme="https://itcxx.github.io/categories/ML/"/>
+    
+    
+    <category term="Transformer" scheme="https://itcxx.github.io/tags/Transformer/"/>
+    
+    <category term="Seq2seq" scheme="https://itcxx.github.io/tags/Seq2seq/"/>
+    
+  </entry>
   
   <entry>
     <title>注意力机制</title>
