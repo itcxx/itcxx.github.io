@@ -6,7 +6,7 @@
   <link href="https://itcxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://itcxx.github.io/"/>
-  <updated>2023-05-21T05:32:19.167Z</updated>
+  <updated>2023-05-30T06:54:35.314Z</updated>
   <id>https://itcxx.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BERT</title>
+    <link href="https://itcxx.github.io/2023/05/21/BERT/"/>
+    <id>https://itcxx.github.io/2023/05/21/BERT/</id>
+    <published>2023-05-21T06:34:00.000Z</published>
+    <updated>2023-05-30T06:54:35.314Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;bert&quot;&gt;BERT&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;BERT 参数量 340M parameters&lt;/li&gt;
+&lt;li&gt;GPT-3 :175B&lt;/li&gt;
+&lt;li&gt;Switch Transformer:</summary>
+        
+      
+    
+    
+    
+    <category term="ML" scheme="https://itcxx.github.io/categories/ML/"/>
+    
+    
+    <category term="BERT" scheme="https://itcxx.github.io/tags/BERT/"/>
+    
+  </entry>
   
   <entry>
     <title>Transformer</title>

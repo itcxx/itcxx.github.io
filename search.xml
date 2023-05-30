@@ -2566,4 +2566,118 @@ NAT是一次性输出，一次就产生一个句子出来，不是一次只产�
         <tag>Seq2seq</tag>
       </tags>
   </entry>
+  <entry>
+    <title>BERT</title>
+    <url>/2023/05/21/BERT/</url>
+    <content><![CDATA[<h4 id="bert">BERT</h4>
+<ul>
+<li>BERT 参数量 340M parameters</li>
+<li>GPT-3 :175B</li>
+<li>Switch Transformer: 1.6T</li>
+</ul>
+<blockquote>
+<p>Self-supervised Learning(自监督学习）</p>
+</blockquote>
+<pre><code>监督学习（supervised Learning) : 使用Label进行训练的模型.
+自监督（self-supervised Learning):在没有Label的情况下，自己想办法做supervised learning。self-supervised learning其实是一种非监督学习（unsupervised learning)
+</code></pre>
+<p><img src="/images/pasted-57.png" alt="upload successful"></p>
+<h5 id="bert-encoder">BERT- Encoder</h5>
+<p>BERT的encoder部分和Transformer中的encoder部分一样</p>
+<blockquote>
+<p>Masking input</p>
+</blockquote>
+<ul>
+<li>类似让BERT制作填空题</li>
+</ul>
+<p><a href="https://arxiv.org/abs/1810.04805">Masking input</a></p>
+<p>在BERT 的encoder中有一个Masking机制，改变输入的向量，（图片黑色部分表示mask)有两种操作方式将mask部分替换成其它字段</p>
+<ol>
+<li>将某向量替换成特殊的Token</li>
+<li>将某向量随机的替换成某个数</li>
+</ol>
+<p>类似操作如下图：</p>
+<p><img src="/images/pasted-58.png" alt="upload successful"></p>
+<p>Mask的部分也有输出，把盖住的部分的输出作一个Linear操作（即:乘以一个向量）然后再做softmax得到一个包含所有字符的分布</p>
+<p><img src="/images/pasted-59.png" alt="upload successful"></p>
+<p>训练方式：</p>
+<p><img src="/images/pasted-60.png" alt="upload successful"></p>
+<p>训练的过程就是让BERT能够成功的预测出Ground truth的值，即被masking的部分的值（‘湾’）</p>
+<blockquote>
+<p>Next Sentence Prediction</p>
+</blockquote>
+<ul>
+<li>判断两个句子的关联性</li>
+</ul>
+<p>用于预测两个句子是否是连接的（研究表明这种方法实际作用不大）</p>
+<p><img src="/images/pasted-61.png" alt="upload successful"></p>
+<blockquote>
+<p>BERT 的 Fine-tune( 微调 )</p>
+</blockquote>
+<p>用预训练好的某些BERT模型参数初始化模型</p>
+<p><img src="/images/pasted-62.png" alt="upload successful"></p>
+<blockquote>
+<p>How to use BERT</p>
+</blockquote>
+<ul>
+<li>Sentiment analysis: 判断句子好坏（分类）</li>
+</ul>
+<p>模型的初始化有两个部分，一个是Linear连接部分，一个是BERT模块</p>
+<p>Linear 模块： 使用Random initialization进行初始化<br>
+BERT模块： 使用预训练好的模型参数进行初始化，比如上图中Masking Input阶段完成填空训练的模型参数</p>
+<p><img src="/images/pasted-63.png" alt="upload successful"></p>
+<blockquote>
+<p>POS tagging 词性标注(输入输出相同长度）</p>
+</blockquote>
+<p><img src="/images/pasted-64.png" alt="upload successful"></p>
+<blockquote>
+<p>NLI(Natural Language Inferencee)</p>
+</blockquote>
+<p>给出两个句子,判断句子间是否矛盾</p>
+<p>例如：<br>
+句子1： 前提：一个人坐在马上跳过一架坏掉的飞机<br>
+句子2： 猜测： 人在一个小餐车上</p>
+<p>=》 让模型判断是连个句子是否矛盾</p>
+<p><img src="/images/pasted-65.png" alt="upload successful"></p>
+<p><img src="/images/pasted-66.png" alt="upload successful"></p>
+<blockquote>
+<p>QA （Question Answering)</p>
+</blockquote>
+<ul>
+<li>前提是答案已经嵌入在Q当中</li>
+</ul>
+<p><img src="/images/pasted-67.png" alt="upload successful"></p>
+<p>上图说明，问答模型的实现，D是给出的文章的文字集合，Q是问题的文字字段集合。<br>
+将D，Q输入到模型中，让模型输入s,e这两个整数，s和e就是正确答案的初始位置和结束位的下表</p>
+<p><img src="/images/pasted-68.png" alt="upload successful"></p>
+<ul>
+<li>上例中QA训练过程(前提是正确答案已经在文章当中）</li>
+</ul>
+<p>训练过程分为两个部分，训练s，和e (s,e表示答案在文章中的起始位和终止位置坐标)</p>
+<ul>
+<li>随机初始化两个向量，向量大小和BERT的单个输出大小相同。 （如图：橙色，蓝色模块）</li>
+</ul>
+<p><img src="/images/pasted-69.png" alt="upload successful"></p>
+<ul>
+<li>
+<ol>
+<li>将一个向量和BERT中document部分输出的值做内积</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>使用softmax计算每个单词做出内积的概率分布，然后得到最大概率的值的下标就是S</li>
+</ol>
+</li>
+</ul>
+<p>使用同样的方式计算出结束位置</p>
+<p><img src="/images/pasted-70.png" alt="upload successful"></p>
+]]></content>
+      <categories>
+        <category>ML</category>
+      </categories>
+      <tags>
+        <tag>BERT</tag>
+      </tags>
+  </entry>
 </search>
