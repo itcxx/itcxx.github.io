@@ -6,7 +6,7 @@
   <link href="https://itcxx.github.io/atom.xml" rel="self"/>
   
   <link href="https://itcxx.github.io/"/>
-  <updated>2023-05-30T06:54:35.314Z</updated>
+  <updated>2023-06-04T08:46:54.692Z</updated>
   <id>https://itcxx.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Optimization</title>
+    <link href="https://itcxx.github.io/2023/06/04/Optimization/"/>
+    <id>https://itcxx.github.io/2023/06/04/Optimization/</id>
+    <published>2023-06-04T07:38:00.000Z</published>
+    <updated>2023-06-04T08:46:54.692Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;new-optimization&quot;&gt;New Optimization&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;学习前的参数说明&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/images/pasted-72.png&quot; alt=&quot;upload</summary>
+        
+      
+    
+    
+    
+    <category term="ML" scheme="https://itcxx.github.io/categories/ML/"/>
+    
+    
+    <category term="Optimization" scheme="https://itcxx.github.io/tags/Optimization/"/>
+    
+    <category term="优化算法" scheme="https://itcxx.github.io/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>BERT</title>
@@ -552,33 +583,6 @@ elif</summary>
     <category term="hexo部署" scheme="https://itcxx.github.io/tags/hexo%E9%83%A8%E7%BD%B2/"/>
     
     <category term="hexo Theme" scheme="https://itcxx.github.io/tags/hexo-Theme/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo博客搭建</title>
-    <link href="https://itcxx.github.io/2021/01/02/one/"/>
-    <id>https://itcxx.github.io/2021/01/02/one/</id>
-    <published>2021-01-02T03:32:23.000Z</published>
-    <updated>2022-08-19T06:11:59.506Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;免费部署个人博客hexo到GitHub&quot;&gt;&lt;a href=&quot;#免费部署个人博客hexo到GitHub&quot; class=&quot;headerlink&quot; title=&quot;免费部署个人博客hexo到GitHub&quot;&gt;&lt;/a&gt;免费部署个人博客hexo到GitHub&lt;/h2&gt;&lt;h4</summary>
-        
-      
-    
-    
-    
-    <category term="文章" scheme="https://itcxx.github.io/categories/%E6%96%87%E7%AB%A0/"/>
-    
-    <category term="hexo" scheme="https://itcxx.github.io/categories/%E6%96%87%E7%AB%A0/hexo/"/>
-    
-    
-    <category term="hexo部署" scheme="https://itcxx.github.io/tags/hexo%E9%83%A8%E7%BD%B2/"/>
     
   </entry>
   

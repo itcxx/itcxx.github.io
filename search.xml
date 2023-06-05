@@ -2680,4 +2680,61 @@ BERT模块： 使用预训练好的模型参数进行初始化，比如上图中
         <tag>BERT</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Optimization</title>
+    <url>/2023/06/04/Optimization/</url>
+    <content><![CDATA[<h4 id="new-optimization">New Optimization</h4>
+<blockquote>
+<p>学习前的参数说明</p>
+</blockquote>
+<p><img src="/images/pasted-72.png" alt="upload successful"></p>
+<blockquote>
+<p>优化算法的目的</p>
+</blockquote>
+<ul>
+<li>就是找到模型中的参数使得Loss最小化</li>
+</ul>
+<p><img src="/images/pasted-73.png" alt="upload successful"></p>
+<blockquote>
+<p>On-Line VS Off-Line</p>
+</blockquote>
+<ul>
+<li>On-line : 在训练的time step上只加载部分数据</li>
+<li>off-line: 加载所有数据</li>
+</ul>
+<p>下面的方法建立在off-line cases</p>
+<blockquote>
+<p>GD( Gradient Descent)</p>
+</blockquote>
+<ul>
+<li>梯度下降：最基础的优化算法，基本不用，因为每次迭代需要计算所有样本的梯度</li>
+</ul>
+<blockquote>
+<p>SGD(Stochastic Gradient Descent，SGD)</p>
+</blockquote>
+<ul>
+<li>随机梯度下降：在每个训练步骤中，SGD随机选择一个样本（或一小批样本，称为mini-batch）来计算梯度，而不是使用整个数据集。</li>
+</ul>
+<p>: 具体来说，SGD的每个epoch（也就是遍历一次整个训练集）中的每个步骤如下：</p>
+<p>随机选择一个样本（或一小批样本）。<br>
+计算该样本（或样本批次）对于模型参数的梯度。<br>
+按照梯度的方向，更新模型参数。<br>
+这种方法的优点是计算速度快，因为每次只需要计算一个样本（或一小批样本）的梯度。而且，由于每次都是随机选择样本，这也增加了模型的鲁棒性，可以防止模型过拟合。</p>
+<p>然而，SGD的缺点: 是由于每次只使用一个样本（或一小批样本）来更新模型参数，因此训练过程可能会比较不稳定，损失函数可能会有大的波动。为了解决这个问题，通常会使用一些技巧，如学习率衰减、动量（momentum）等。</p>
+<pre><code>	如果样本数为100个，使用SGD算法的话一次epoch模型参数会被更新100次
+</code></pre>
+<blockquote>
+<p>mini-batch SGD (小批量随机梯度下降）</p>
+</blockquote>
+<p>SGD： 是单样本的梯度计算，很难完全利用硬件资源。</p>
+<p>mini-batch SGD:</p>
+]]></content>
+      <categories>
+        <category>ML</category>
+      </categories>
+      <tags>
+        <tag>Optimization</tag>
+        <tag>优化算法</tag>
+      </tags>
+  </entry>
 </search>
